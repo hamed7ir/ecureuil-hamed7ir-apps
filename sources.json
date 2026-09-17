@@ -1,0 +1,21 @@
+[
+  {
+    "id": "hamed7ir",
+    "name": "hamed7ir's Ecureuil source",
+    "description": "ARM32 applications for Windows RT and Windows 10 ARM32, built and tested on Surface RT and Surface 2 hardware.",
+    "categories": [
+      "Utilities",
+      "Development",
+      "Undefined"
+    ],
+    "url": "https://hamed7ir.github.io/ecureuil-hamed7ir-apps/source-name-index.json",
+    "originalURL": "",
+    "iconUrl": "https://avatars.githubusercontent.com/u/30177186?v=4",
+    "author": "hamed7ir",
+    "authorLink": [
+      "https://github.com/hamed7ir"
+    ],
+    "dateCreated": "2026-09-17",
+    "isLocal": false
+  }
+]

@@ -1,0 +1,55 @@
+{
+  "id": "csray",
+  "name": "CS-Ray",
+  "version": "1.1.0",
+  "author": "hamed7ir",
+  "uploader": "hamed7ir",
+  "source": "hamed7ir",
+  "category": "Utilities",
+  "description": "CS-Ray is a proxy client written entirely in managed C# (.NET Framework 4.7, WinForms) with a hand-written userspace TUN TCP/IP netstack, so that a VLESS/VMess/Shadowsocks client can run on legacy ARM32 Windows, where the native proxy cores have no builds. It handles VLESS, VMess (AEAD), Shadowsocks (AEAD), SOCKS5 and HTTP(S) outbounds over raw TCP, TLS 1.2, WebSocket-over-TLS and XHTTP, exposes a mixed SOCKS5+HTTP inbound on 127.0.0.1:10810, and provides system-proxy and full-tunnel (Wintun) modes. REALITY, uTLS, XTLS, ECH and QUIC-based transports are not supported because of the managed-TLS ceiling; servers using them are imported but greyed out. It also runs on Windows RT 8.0 once the .NET Framework 4.8 update is installed, which is currently difficult to obtain for that version. The project describes itself as alpha software.",
+  "dateOriginal": "2026-07-08",
+  "dateSource": "2026-07-08",
+  "size": "6649189",
+  "dependencies": [
+    ".NET Framework 4.7",
+    "Windows RT 8.0 only: the .NET Framework 4.8 update must be installed before the app will start. It is currently difficult to obtain for RT 8.0."
+  ],
+  "instructionSteps": [
+    "On Windows RT 8.1, jailbreak the device first — RT only runs unsigned desktop apps after the jailbreak.",
+    "Make sure .NET Framework 4.7 is installed on the device.",
+    "On Windows RT 8.0, install the .NET Framework 4.8 update first — the app will not start without it, and it is currently difficult to obtain for that version.",
+    "Extract CS-Ray-1.1.0-Setup-AnyCPU.zip.",
+    "Run Setup.exe — it installs per user and does not need administrator rights.",
+    "If SmartScreen warns about an unknown publisher, choose More info, then Run anyway; the build is unsigned.",
+    "Start CS-Ray and add a server with a vless://, vmess://, ss://, socks:// or http(s):// link, or add a subscription URL in Settings.",
+    "Select a server in the list and press Start Engine; the local SOCKS5+HTTP inbound listens on 127.0.0.1:10810.",
+    "Turn on System proxy for browsers and WinINET apps — no elevation is needed.",
+    "Turn on Full tunnel (TUN) only if you want whole-device capture, and approve the administrator prompt it raises."
+  ],
+  "isImmersive": false,
+  "links": [
+    "https://github.com/hamed7ir/CS-Ray",
+    "https://github.com/hamed7ir/CS-Ray/releases/tag/v1.1.0",
+    "https://www.wintun.net/"
+  ],
+  "architecture": "arm32",
+  "installParameters": [],
+  "DownloadPath": "Setup.exe",
+  "fileType": "zip",
+  "uninstallParameters": [],
+  "isPortable": false,
+  "compatibility": [
+    "8.0",
+    "8.1",
+    "10"
+  ],
+  "iconUrl": "https://raw.githubusercontent.com/hamed7ir/CS-Ray/refs/heads/main/CS-Ray/icon/icon.ico",
+  "screenshots": [
+    "https://github.com/user-attachments/assets/97aee84b-15c2-4f84-b416-50152570de62"
+  ],
+  "downloadUrl": "https://github.com/hamed7ir/CS-Ray/releases/download/v1.1.0/CS-Ray-1.1.0-Setup-AnyCPU.zip",
+  "language": [
+    "en-US"
+  ],
+  "isTrial": false
+}

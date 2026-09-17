@@ -1,0 +1,81 @@
+{
+  "id": "xdm-rt1",
+  "name": "Xtreme Download Manager",
+  "version": "8.0.29-rt1",
+  "author": "Subhra Das Gupta",
+  "uploader": "hamed7ir",
+  "source": "hamed7ir",
+  "category": "Utilities",
+  "description": "Xtreme Download Manager 8.0.29 packaged to run on Windows RT 8.0 and 8.1 and on Windows 10 ARM32, all on ARM32 hardware. It performs plain and multi-segment HTTP/HTTPS downloading with resume; the video-download feature is omitted because yt-dlp and ffmpeg are x86 processes that cannot execute on ARM32. This is an unofficial fork of subhra74/xdm by hamed7ir in which no source line is changed — the only modification is the application icon. It needs .NET Framework 4.5 or later and WPF, and because Windows RT does not ship WPF an ARM32 WPF build must be installed once with the included wpf-prerequisite\\wpf-setup.cmd before XDM will start.",
+  "dateOriginal": "2026-08-03",
+  "dateSource": "2026-08-03",
+  "size": "3023259",
+  "dependencies": [
+    ".NET Framework 4.5 or later — on Windows RT 8.1 install the RT-specific package https://go.microsoft.com/fwlink/?linkid=2088632, which appears afterwards as KB4486105",
+    "KB2919355, the Windows RT 8.1 Update — required before that .NET package will install",
+    "WPF for ARM32 — not bundled and not redistributable here; obtain the XDA ARM32 WPF port and install it once with the included wpf-prerequisite\\wpf-setup.cmd",
+    "Windows test-signing mode enabled on the device — the packages are unsigned desktop applications"
+  ],
+  "instructionSteps": [
+    "Install KB2919355, the Windows RT 8.1 Update, if it is not already present.",
+    "Install the .NET Framework package for Windows RT from https://go.microsoft.com/fwlink/?linkid=2088632 and reboot when it asks.",
+    "Put the device into Windows' test-signing mode so unsigned desktop applications can run.",
+    "Extract XDM-8.0.29-rt1-Setup-AnyCPU.zip, keeping Setup.exe and payload.zip together.",
+    "Download the ARM32 WPF port archive from https://xdaforums.com/t/wpf-for-windows-rt-devices.3763345/ and extract it next to wpf-prerequisite\\wpf-setup.cmd.",
+    "Run wpf-prerequisite\\wpf-setup.cmd /verify to see what is missing; it changes nothing and needs no administrator.",
+    "Run wpf-prerequisite\\wpf-setup.cmd as Administrator to install WPF.",
+    "Run Setup.exe --check to confirm everything is in place; it changes nothing.",
+    "Run Setup.exe to install XDM per user, then start XDM from the Start menu."
+  ],
+  "isImmersive": false,
+  "links": [
+    "https://github.com/hamed7ir/xdm",
+    "https://github.com/hamed7ir/xdm/releases/tag/8.0.29-rt1",
+    "https://github.com/subhra74/xdm",
+    "https://github.com/hamed7ir/xdm-bridge",
+    "https://github.com/hamed7ir/sqlite-interop-arm32",
+    "https://xdaforums.com/t/wpf-for-windows-rt-devices.3763345/"
+  ],
+  "architecture": "arm32",
+  "installParameters": [],
+  "DownloadPath": "Setup.exe",
+  "fileType": "zip",
+  "uninstallParameters": [],
+  "isPortable": false,
+  "compatibility": [
+    "8.0",
+    "8.1",
+    "10"
+  ],
+  "iconUrl": "https://raw.githubusercontent.com/hamed7ir/xdm/refs/heads/rt-arm32/app/XDM/XDM.Wpf.UI/xdm-logo.ico",
+  "screenshots": [
+    "https://github.com/user-attachments/assets/3cfbdd2f-a47e-4161-b7f3-62267be9100e"
+  ],
+  "downloadUrl": "https://github.com/hamed7ir/xdm/releases/download/8.0.29-rt1/XDM-8.0.29-rt1-Setup-AnyCPU.zip",
+  "language": [
+    "en-US",
+    "ar",
+    "zh-CN",
+    "zh-Hant",
+    "cs",
+    "fr",
+    "de",
+    "hu",
+    "id",
+    "it",
+    "ko",
+    "ne",
+    "pl",
+    "pt-BR",
+    "ro",
+    "ru",
+    "sr-Latn",
+    "sr-Cyrl",
+    "es",
+    "zh-TW",
+    "tr",
+    "uk",
+    "vi"
+  ],
+  "isTrial": false
+}

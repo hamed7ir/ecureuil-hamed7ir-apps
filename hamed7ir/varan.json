@@ -1,0 +1,54 @@
+{
+  "id": "varan",
+  "name": "Varan",
+  "version": "1.1",
+  "author": "Moonchild Productions",
+  "uploader": "hamed7ir",
+  "source": "hamed7ir",
+  "category": "Utilities",
+  "description": "Varan is a fork of the Pale Moon web browser built for 32-bit ARM Windows RT devices such as the Surface RT and Surface 2 (Tegra 3 / Cortex-A9), a target upstream does not build for. It runs on Windows RT 8.0 and 8.1 and on Windows 10 ARM32. Release 1.1 is based on Pale Moon 35.0.0 with the UXP RB_20260914 platform, and adds ARM NEON support to libvpx plus ARM assembly for ffvpx so 720p and 1080p playback works. The device must be put in test-signing mode first, because Windows RT will not load unsigned ARM binaries under its default policy, and it needs the Microsoft Visual C++ 2015 or later redistributable for ARM32. It is not endorsed by or affiliated with Moonchild Productions, and bugs belong in this repository rather than with the Pale Moon project.",
+  "dateOriginal": "2026-09-16",
+  "dateSource": "2026-09-16",
+  "size": "43581245",
+  "dependencies": [
+    "Windows RT device placed in test-signing mode — required to run the unsigned ARM binaries",
+    "Microsoft Visual C++ 2015 or later redistributable for ARM32 — varan.exe imports VCRUNTIME140.dll and the api-ms-win-crt-* Universal CRT stubs, and no CRT is bundled in the package.",
+    "vorapis v3 extension (https://vorapis.pages.dev/#/home/download) — third party, needed only for YouTube; not bundled in this package"
+  ],
+  "instructionSteps": [
+    "Put the device in test-signing mode.",
+    "Install the Microsoft Visual C++ 2015 or later redistributable for ARM32 if it is not already present — varan.exe needs VCRUNTIME140.dll and the Universal CRT.",
+    "Extract Varan-35.0.0-arm32-Setup.zip. It unpacks into a folder named Varan-Setup holding Setup.exe and payload.zip.",
+    "Keep Setup.exe and payload.zip together in that folder, then run Setup.exe to perform the per-user install; it preserves the profile on removal.",
+    "Launch Varan from its shortcut.",
+    "(Recommended) Remove the old profile from %APPDATA% (C:\\Users\\<you>\\AppData\\Roaming) and start fresh."
+  ],
+  "isImmersive": false,
+  "links": [
+    "https://github.com/hamed7ir/varan",
+    "https://github.com/hamed7ir/varan/releases/tag/1.1",
+    "https://github.com/hamed7ir/varan-uxp",
+    "https://repo.palemoon.org/MoonchildProductions/Pale-Moon",
+    "https://www.palemoon.org/"
+  ],
+  "architecture": "arm32",
+  "installParameters": [],
+  "DownloadPath": "Varan-Setup/Setup.exe",
+  "fileType": "zip",
+  "uninstallParameters": [],
+  "isPortable": false,
+  "compatibility": [
+    "8.0",
+    "8.1",
+    "10"
+  ],
+  "iconUrl": "https://raw.githubusercontent.com/hamed7ir/varan/refs/tags/1.1/palemoon/branding/unofficial/default256.png",
+  "screenshots": [
+    "https://github.com/user-attachments/assets/43322a7b-3726-4e10-805d-450ba1f93f57"
+  ],
+  "downloadUrl": "https://github.com/hamed7ir/varan/releases/download/1.1/Varan-35.0.0-arm32-Setup.zip",
+  "language": [
+    "en-US"
+  ],
+  "isTrial": false
+}

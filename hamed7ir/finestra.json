@@ -1,0 +1,57 @@
+{
+  "id": "finestra",
+  "name": "Finestra",
+  "version": "1.0.3",
+  "author": "hamed7ir",
+  "uploader": "hamed7ir",
+  "source": "hamed7ir",
+  "category": "Utilities",
+  "description": "Finestra is a remote connection manager that runs RDP, SSH and SFTP/FTP/FTPS sessions as tabs in a single window, with a dual-pane file browser for the transfer protocols and an xterm-256color terminal for SSH. Its RDP engine is a modified build of FreeRDP 3.28.0 cross-compiled for ARM32 and x64; the 32-bit x86 engine is not bundled. One AnyCPU build covers Windows RT 8.1 on ARM32 and Windows 10/11 on ARM32, x86 and x64, and it requires .NET Framework 4.7 or later. It also runs on Windows RT 8.0 once the .NET Framework 4.8 update is installed, which is currently difficult to obtain for that version. The binaries are unsigned, and Windows RT needs a jailbroken device.",
+  "dateOriginal": "2026-08-08",
+  "dateSource": "2026-08-08",
+  "size": "10353908",
+  "dependencies": [
+    ".NET Framework 4.7 or later",
+    "Windows RT 8.0 only: the .NET Framework 4.8 update must be installed before the app will start. It is currently difficult to obtain for RT 8.0."
+  ],
+  "instructionSteps": [
+    "Install .NET Framework 4.7 or later if the device does not already have it.",
+    "On Windows RT 8.0, install the .NET Framework 4.8 update first — the app will not start without it, and it is currently difficult to obtain for that version.",
+    "On Windows RT 8.1, jailbreak the device first — RT only runs unsigned desktop apps after the jailbreak.",
+    "Extract Finestra-Setup-1.0.3.zip to any folder.",
+    "Keep Setup.exe and payload.zip together in that folder — Setup.exe reads payload.zip from beside itself.",
+    "Run Setup.exe. It installs per user into %LocalAppData%\\Programs\\Finestra and needs no administrator rights.",
+    "At the SmartScreen warning choose More info, then Run anyway — the binaries are unsigned.",
+    "Start Finestra from its Start-menu shortcut.",
+    "On 32-bit x86 Windows only, drop a 32-bit wfreerdp.exe into engine\\x86\\ to enable RDP."
+  ],
+  "isImmersive": false,
+  "links": [
+    "https://github.com/hamed7ir/Finestra",
+    "https://github.com/hamed7ir/Finestra/releases",
+    "https://github.com/hamed7ir/FreeRDP"
+  ],
+  "architecture": "arm32",
+  "installParameters": [],
+  "DownloadPath": "Setup.exe",
+  "fileType": "zip",
+  "uninstallParameters": [],
+  "isPortable": false,
+  "compatibility": [
+    "8.0",
+    "8.1",
+    "10"
+  ],
+  "iconUrl": "https://raw.githubusercontent.com/hamed7ir/Finestra/refs/heads/main/Finestra.ico",
+  "screenshots": [
+    "https://raw.githubusercontent.com/hamed7ir/Finestra/refs/heads/main/docs/manager.png",
+    "https://raw.githubusercontent.com/hamed7ir/Finestra/refs/heads/main/docs/session-tabs.png",
+    "https://raw.githubusercontent.com/hamed7ir/Finestra/refs/heads/main/docs/session-tabs2.jpg",
+    "https://raw.githubusercontent.com/hamed7ir/Finestra/refs/heads/main/docs/about.png"
+  ],
+  "downloadUrl": "https://github.com/hamed7ir/Finestra/releases/download/v1.0.3/Finestra-Setup-1.0.3.zip",
+  "language": [
+    "en-US"
+  ],
+  "isTrial": false
+}

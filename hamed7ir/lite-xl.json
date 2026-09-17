@@ -1,0 +1,52 @@
+{
+  "id": "lite-xl",
+  "name": "Lite XL",
+  "version": "2.1.8-arm32",
+  "author": "Lite XL Team",
+  "uploader": "hamed7ir",
+  "source": "hamed7ir",
+  "category": "Development",
+  "description": "Lite XL is a text editor written mostly in Lua, derived from rxi's lite. This is an unofficial 32-bit ARM Windows build of Lite XL 2.1.8, a target upstream does not ship; it was measured running on Windows RT 8.0, Windows RT 8.1 and Windows 10 ARM32. The editor links the C runtime statically and needs no runtime installed. The installer in this package is MSIL/AnyCPU and needs .NET Framework 4.0, which is in-box on Windows RT; it installs per user and asks for no administrator rights.",
+  "dateOriginal": "2026-09-11",
+  "dateSource": "2026-09-11",
+  "size": "1934521",
+  "dependencies": [
+    ".NET Framework 4.0 — for the installer only; present on Windows RT out of the box. The editor itself needs no runtime."
+  ],
+  "instructionSteps": [
+    "Extract lite-xl-2.1.8-arm32-windows-setup.zip anywhere. It unpacks into a folder named lite-xl-2.1.8-arm32-windows-setup.",
+    "Open that folder and run LiteXLSetup.exe. Windows warns about an unknown publisher because the build is not code-signed.",
+    "Pick an install folder, or take the default %LOCALAPPDATA%\\Programs\\Lite XL.",
+    "Tick the Start menu shortcut, Desktop shortcut and right-click entry you want, then press Install.",
+    "It installs per user and needs no administrator rights.",
+    "To remove it later, use Settings > Apps, or run LiteXLUninstall.exe from the install folder."
+  ],
+  "isImmersive": false,
+  "links": [
+    "https://github.com/hamed7ir/lite-xl-rt",
+    "https://github.com/hamed7ir/lite-xl-rt/releases/tag/2.1.8-arm32",
+    "https://github.com/hamed7ir/lite-xl-rt/blob/rt-arm32/README-ARM32.md",
+    "https://github.com/lite-xl/lite-xl",
+    "https://lite-xl.com"
+  ],
+  "architecture": "arm32",
+  "installParameters": [],
+  "DownloadPath": "lite-xl-2.1.8-arm32-windows-setup/LiteXLSetup.exe",
+  "fileType": "zip",
+  "uninstallParameters": [],
+  "isPortable": false,
+  "compatibility": [
+    "8.0",
+    "8.1",
+    "10"
+  ],
+  "iconUrl": "https://raw.githubusercontent.com/hamed7ir/lite-xl-rt/refs/heads/rt-arm32/resources/icons/icon.ico",
+  "screenshots": [
+    "https://github.com/user-attachments/assets/8df71df3-4fe4-4a72-9e32-904b6cc50241"
+  ],
+  "downloadUrl": "https://github.com/hamed7ir/lite-xl-rt/releases/download/2.1.8-arm32/lite-xl-2.1.8-arm32-windows-setup.zip",
+  "language": [
+    "en-US"
+  ],
+  "isTrial": false
+}

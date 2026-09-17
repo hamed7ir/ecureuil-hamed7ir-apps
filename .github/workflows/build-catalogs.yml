@@ -1,0 +1,35 @@
+name: Generate App Catalog
+
+on:
+  workflow_dispatch: #
+  push:
+    branches: [ main ]
+    paths:
+      #substitute source-name with the name of the folder containing the app JSONs
+      - 'hamed7ir/**'
+
+permissions:
+  contents: write
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Build catalog
+        run: |
+          jq -s '.' hamed7ir/*.json > source-name-index.json
+
+      - name: Commit and push
+        run: |
+          git config --global user.name "source-name bot"
+          git config --global user.email "source-name@users.noreply.github.com"
+          #can be left like so
+          
+          git add source-name-index.json
+          #add all your finished JSONs to the list of git add
+          
+          git commit -m "Updated catalog [skip ci]" || exit 0
+          git push
