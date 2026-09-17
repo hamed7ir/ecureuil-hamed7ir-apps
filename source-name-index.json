@@ -1,0 +1,355 @@
+[
+  {
+    "id": "csray",
+    "name": "CS-Ray",
+    "version": "1.1.0",
+    "author": "hamed7ir",
+    "uploader": "hamed7ir",
+    "source": "hamed7ir",
+    "category": "Utilities",
+    "description": "CS-Ray is a proxy client written entirely in managed C# (.NET Framework 4.7, WinForms) with a hand-written userspace TUN TCP/IP netstack, so that a VLESS/VMess/Shadowsocks client can run on legacy ARM32 Windows, where the native proxy cores have no builds. It handles VLESS, VMess (AEAD), Shadowsocks (AEAD), SOCKS5 and HTTP(S) outbounds over raw TCP, TLS 1.2, WebSocket-over-TLS and XHTTP, exposes a mixed SOCKS5+HTTP inbound on 127.0.0.1:10810, and provides system-proxy and full-tunnel (Wintun) modes. REALITY, uTLS, XTLS, ECH and QUIC-based transports are not supported because of the managed-TLS ceiling; servers using them are imported but greyed out. It also runs on Windows RT 8.0 once the .NET Framework 4.8 update is installed, which is currently difficult to obtain for that version. The project describes itself as alpha software.",
+    "dateOriginal": "2026-07-08",
+    "dateSource": "2026-07-08",
+    "size": "6649189",
+    "dependencies": [
+      ".NET Framework 4.7",
+      "Windows RT 8.0 only: the .NET Framework 4.8 update must be installed before the app will start. It is currently difficult to obtain for RT 8.0."
+    ],
+    "instructionSteps": [
+      "On Windows RT 8.1, jailbreak the device first — RT only runs unsigned desktop apps after the jailbreak.",
+      "Make sure .NET Framework 4.7 is installed on the device.",
+      "On Windows RT 8.0, install the .NET Framework 4.8 update first — the app will not start without it, and it is currently difficult to obtain for that version.",
+      "Extract CS-Ray-1.1.0-Setup-AnyCPU.zip.",
+      "Run Setup.exe — it installs per user and does not need administrator rights.",
+      "If SmartScreen warns about an unknown publisher, choose More info, then Run anyway; the build is unsigned.",
+      "Start CS-Ray and add a server with a vless://, vmess://, ss://, socks:// or http(s):// link, or add a subscription URL in Settings.",
+      "Select a server in the list and press Start Engine; the local SOCKS5+HTTP inbound listens on 127.0.0.1:10810.",
+      "Turn on System proxy for browsers and WinINET apps — no elevation is needed.",
+      "Turn on Full tunnel (TUN) only if you want whole-device capture, and approve the administrator prompt it raises."
+    ],
+    "isImmersive": false,
+    "links": [
+      "https://github.com/hamed7ir/CS-Ray",
+      "https://github.com/hamed7ir/CS-Ray/releases/tag/v1.1.0",
+      "https://www.wintun.net/"
+    ],
+    "architecture": "arm32",
+    "installParameters": [],
+    "DownloadPath": "Setup.exe",
+    "fileType": "zip",
+    "uninstallParameters": [],
+    "isPortable": false,
+    "compatibility": [
+      "8.0",
+      "8.1",
+      "10"
+    ],
+    "iconUrl": "https://raw.githubusercontent.com/hamed7ir/CS-Ray/refs/heads/main/CS-Ray/icon/icon.ico",
+    "screenshots": [
+      "https://github.com/user-attachments/assets/97aee84b-15c2-4f84-b416-50152570de62"
+    ],
+    "downloadUrl": "https://github.com/hamed7ir/CS-Ray/releases/download/v1.1.0/CS-Ray-1.1.0-Setup-AnyCPU.zip",
+    "language": [
+      "en-US"
+    ],
+    "isTrial": false
+  },
+  {
+    "id": "finestra",
+    "name": "Finestra",
+    "version": "1.0.3",
+    "author": "hamed7ir",
+    "uploader": "hamed7ir",
+    "source": "hamed7ir",
+    "category": "Utilities",
+    "description": "Finestra is a remote connection manager that runs RDP, SSH and SFTP/FTP/FTPS sessions as tabs in a single window, with a dual-pane file browser for the transfer protocols and an xterm-256color terminal for SSH. Its RDP engine is a modified build of FreeRDP 3.28.0 cross-compiled for ARM32 and x64; the 32-bit x86 engine is not bundled. One AnyCPU build covers Windows RT 8.1 on ARM32 and Windows 10/11 on ARM32, x86 and x64, and it requires .NET Framework 4.7 or later. It also runs on Windows RT 8.0 once the .NET Framework 4.8 update is installed, which is currently difficult to obtain for that version. The binaries are unsigned, and Windows RT needs a jailbroken device.",
+    "dateOriginal": "2026-08-08",
+    "dateSource": "2026-08-08",
+    "size": "10353908",
+    "dependencies": [
+      ".NET Framework 4.7 or later",
+      "Windows RT 8.0 only: the .NET Framework 4.8 update must be installed before the app will start. It is currently difficult to obtain for RT 8.0."
+    ],
+    "instructionSteps": [
+      "Install .NET Framework 4.7 or later if the device does not already have it.",
+      "On Windows RT 8.0, install the .NET Framework 4.8 update first — the app will not start without it, and it is currently difficult to obtain for that version.",
+      "On Windows RT 8.1, jailbreak the device first — RT only runs unsigned desktop apps after the jailbreak.",
+      "Extract Finestra-Setup-1.0.3.zip to any folder.",
+      "Keep Setup.exe and payload.zip together in that folder — Setup.exe reads payload.zip from beside itself.",
+      "Run Setup.exe. It installs per user into %LocalAppData%\\Programs\\Finestra and needs no administrator rights.",
+      "At the SmartScreen warning choose More info, then Run anyway — the binaries are unsigned.",
+      "Start Finestra from its Start-menu shortcut.",
+      "On 32-bit x86 Windows only, drop a 32-bit wfreerdp.exe into engine\\x86\\ to enable RDP."
+    ],
+    "isImmersive": false,
+    "links": [
+      "https://github.com/hamed7ir/Finestra",
+      "https://github.com/hamed7ir/Finestra/releases",
+      "https://github.com/hamed7ir/FreeRDP"
+    ],
+    "architecture": "arm32",
+    "installParameters": [],
+    "DownloadPath": "Setup.exe",
+    "fileType": "zip",
+    "uninstallParameters": [],
+    "isPortable": false,
+    "compatibility": [
+      "8.0",
+      "8.1",
+      "10"
+    ],
+    "iconUrl": "https://raw.githubusercontent.com/hamed7ir/Finestra/refs/heads/main/Finestra.ico",
+    "screenshots": [
+      "https://raw.githubusercontent.com/hamed7ir/Finestra/refs/heads/main/docs/manager.png",
+      "https://raw.githubusercontent.com/hamed7ir/Finestra/refs/heads/main/docs/session-tabs.png",
+      "https://raw.githubusercontent.com/hamed7ir/Finestra/refs/heads/main/docs/session-tabs2.jpg",
+      "https://raw.githubusercontent.com/hamed7ir/Finestra/refs/heads/main/docs/about.png"
+    ],
+    "downloadUrl": "https://github.com/hamed7ir/Finestra/releases/download/v1.0.3/Finestra-Setup-1.0.3.zip",
+    "language": [
+      "en-US"
+    ],
+    "isTrial": false
+  },
+  {
+    "id": "lite-xl",
+    "name": "Lite XL",
+    "version": "2.1.8-arm32",
+    "author": "Lite XL Team",
+    "uploader": "hamed7ir",
+    "source": "hamed7ir",
+    "category": "Development",
+    "description": "Lite XL is a text editor written mostly in Lua, derived from rxi's lite. This is an unofficial 32-bit ARM Windows build of Lite XL 2.1.8, a target upstream does not ship; it was measured running on Windows RT 8.0, Windows RT 8.1 and Windows 10 ARM32. The editor links the C runtime statically and needs no runtime installed. The installer in this package is MSIL/AnyCPU and needs .NET Framework 4.0, which is in-box on Windows RT; it installs per user and asks for no administrator rights.",
+    "dateOriginal": "2026-09-11",
+    "dateSource": "2026-09-11",
+    "size": "1934521",
+    "dependencies": [
+      ".NET Framework 4.0 — for the installer only; present on Windows RT out of the box. The editor itself needs no runtime."
+    ],
+    "instructionSteps": [
+      "Extract lite-xl-2.1.8-arm32-windows-setup.zip anywhere. It unpacks into a folder named lite-xl-2.1.8-arm32-windows-setup.",
+      "Open that folder and run LiteXLSetup.exe. Windows warns about an unknown publisher because the build is not code-signed.",
+      "Pick an install folder, or take the default %LOCALAPPDATA%\\Programs\\Lite XL.",
+      "Tick the Start menu shortcut, Desktop shortcut and right-click entry you want, then press Install.",
+      "It installs per user and needs no administrator rights.",
+      "To remove it later, use Settings > Apps, or run LiteXLUninstall.exe from the install folder."
+    ],
+    "isImmersive": false,
+    "links": [
+      "https://github.com/hamed7ir/lite-xl-rt",
+      "https://github.com/hamed7ir/lite-xl-rt/releases/tag/2.1.8-arm32",
+      "https://github.com/hamed7ir/lite-xl-rt/blob/rt-arm32/README-ARM32.md",
+      "https://github.com/lite-xl/lite-xl",
+      "https://lite-xl.com"
+    ],
+    "architecture": "arm32",
+    "installParameters": [],
+    "DownloadPath": "lite-xl-2.1.8-arm32-windows-setup/LiteXLSetup.exe",
+    "fileType": "zip",
+    "uninstallParameters": [],
+    "isPortable": false,
+    "compatibility": [
+      "8.0",
+      "8.1",
+      "10"
+    ],
+    "iconUrl": "https://raw.githubusercontent.com/hamed7ir/lite-xl-rt/refs/heads/rt-arm32/resources/icons/icon.ico",
+    "screenshots": [
+      "https://github.com/user-attachments/assets/8df71df3-4fe4-4a72-9e32-904b6cc50241"
+    ],
+    "downloadUrl": "https://github.com/hamed7ir/lite-xl-rt/releases/download/2.1.8-arm32/lite-xl-2.1.8-arm32-windows-setup.zip",
+    "language": [
+      "en-US"
+    ],
+    "isTrial": false
+  },
+  {
+    "id": "telegarm",
+    "name": "TelegArm",
+    "version": "1.9.0",
+    "author": "hamed7ir",
+    "uploader": "hamed7ir",
+    "source": "hamed7ir",
+    "category": "Utilities",
+    "description": "TelegArm is a Telegram client for Windows written entirely in managed C#. It speaks MTProto directly through the WTelegramClient library with no native Telegram component, and ships as a single AnyCPU + Prefer32Bit build that runs as a 32-bit process on ARM32 as well as x86, x64 and ARM64. It requires .NET Framework 4.7 or later; Windows RT 8.1 ships only 4.5, so that runtime must be installed first, and on ARM32 it has to come from the Open-RT redistributables mirror because Microsoft's own web installer serves no ARM32 build. It also runs on Windows RT 8.0 once the .NET Framework 4.8 update is installed, which is currently difficult to obtain for that version.",
+    "dateOriginal": "2026-08-08",
+    "dateSource": "2026-08-08",
+    "size": "129129148",
+    "dependencies": [
+      "Microsoft .NET Framework 4.7 or later",
+      "Windows RT 8.0 only: the .NET Framework 4.8 update must be installed before the app will start. It is currently difficult to obtain for RT 8.0."
+    ],
+    "instructionSteps": [
+      "On Windows RT 8.1, jailbreak the device first — RT only runs unsigned desktop apps after the jailbreak.",
+      "On Windows RT 8.1, install .NET Framework 4.7 from https://files.open-rt.party/Software/Redistributables/ — Microsoft's own web installer serves no ARM32 build.",
+      "On Windows 10 ARM32 .NET 4.7 is already present; no action is needed.",
+      "On Windows RT 8.0, install the .NET Framework 4.8 update first — the app will not start without it, and it is currently difficult to obtain for that version.",
+      "Copy TelegArm-1.9.0-Setup-AnyCPU.zip to the device and extract it.",
+      "Keep Setup.exe and payload.zip together in the same folder — Setup reads the payload from beside itself.",
+      "Run Setup.exe, and press Check requirements first if you are unsure whether .NET 4.7 is present.",
+      "Let it install per user into %LocalAppData%\\Programs\\TelegArm; no administrator rights are needed."
+    ],
+    "isImmersive": false,
+    "links": [
+      "https://github.com/hamed7ir/TelegArm",
+      "https://github.com/hamed7ir/TelegArm/releases/tag/v1.9.0",
+      "https://github.com/wiz0u/WTelegramClient",
+      "https://files.open-rt.party/Software/Redistributables/"
+    ],
+    "architecture": "arm32",
+    "installParameters": [],
+    "DownloadPath": "Setup.exe",
+    "fileType": "zip",
+    "uninstallParameters": [],
+    "isPortable": false,
+    "compatibility": [
+      "8.0",
+      "8.1",
+      "10"
+    ],
+    "iconUrl": "https://raw.githubusercontent.com/hamed7ir/TelegArm/refs/heads/main/img-icon/TelegArm.png",
+    "screenshots": [
+      "https://github.com/user-attachments/assets/abbcc303-0894-43a4-b826-63c3cc1695cf"
+    ],
+    "downloadUrl": "https://github.com/hamed7ir/TelegArm/releases/download/v1.9.0/TelegArm-1.9.0-Setup-AnyCPU.zip",
+    "language": [
+      "en-US"
+    ],
+    "isTrial": false
+  },
+  {
+    "id": "varan",
+    "name": "Varan",
+    "version": "1.1",
+    "author": "Moonchild Productions",
+    "uploader": "hamed7ir",
+    "source": "hamed7ir",
+    "category": "Utilities",
+    "description": "Varan is a fork of the Pale Moon web browser built for 32-bit ARM Windows RT devices such as the Surface RT and Surface 2 (Tegra 3 / Cortex-A9), a target upstream does not build for. It runs on Windows RT 8.0 and 8.1 and on Windows 10 ARM32. Release 1.1 is based on Pale Moon 35.0.0 with the UXP RB_20260914 platform, and adds ARM NEON support to libvpx plus ARM assembly for ffvpx so 720p and 1080p playback works. The device must be put in test-signing mode first, because Windows RT will not load unsigned ARM binaries under its default policy, and it needs the Microsoft Visual C++ 2015 or later redistributable for ARM32. It is not endorsed by or affiliated with Moonchild Productions, and bugs belong in this repository rather than with the Pale Moon project.",
+    "dateOriginal": "2026-09-16",
+    "dateSource": "2026-09-16",
+    "size": "43581245",
+    "dependencies": [
+      "Windows RT device placed in test-signing mode — required to run the unsigned ARM binaries",
+      "Microsoft Visual C++ 2015 or later redistributable for ARM32 — varan.exe imports VCRUNTIME140.dll and the api-ms-win-crt-* Universal CRT stubs, and no CRT is bundled in the package.",
+      "vorapis v3 extension (https://vorapis.pages.dev/#/home/download) — third party, needed only for YouTube; not bundled in this package"
+    ],
+    "instructionSteps": [
+      "Put the device in test-signing mode.",
+      "Install the Microsoft Visual C++ 2015 or later redistributable for ARM32 if it is not already present — varan.exe needs VCRUNTIME140.dll and the Universal CRT.",
+      "Extract Varan-35.0.0-arm32-Setup.zip. It unpacks into a folder named Varan-Setup holding Setup.exe and payload.zip.",
+      "Keep Setup.exe and payload.zip together in that folder, then run Setup.exe to perform the per-user install; it preserves the profile on removal.",
+      "Launch Varan from its shortcut.",
+      "(Recommended) Remove the old profile from %APPDATA% (C:\\Users\\<you>\\AppData\\Roaming) and start fresh."
+    ],
+    "isImmersive": false,
+    "links": [
+      "https://github.com/hamed7ir/varan",
+      "https://github.com/hamed7ir/varan/releases/tag/1.1",
+      "https://github.com/hamed7ir/varan-uxp",
+      "https://repo.palemoon.org/MoonchildProductions/Pale-Moon",
+      "https://www.palemoon.org/"
+    ],
+    "architecture": "arm32",
+    "installParameters": [],
+    "DownloadPath": "Varan-Setup/Setup.exe",
+    "fileType": "zip",
+    "uninstallParameters": [],
+    "isPortable": false,
+    "compatibility": [
+      "8.0",
+      "8.1",
+      "10"
+    ],
+    "iconUrl": "https://raw.githubusercontent.com/hamed7ir/varan/refs/tags/1.1/palemoon/branding/unofficial/default256.png",
+    "screenshots": [
+      "https://github.com/user-attachments/assets/43322a7b-3726-4e10-805d-450ba1f93f57"
+    ],
+    "downloadUrl": "https://github.com/hamed7ir/varan/releases/download/1.1/Varan-35.0.0-arm32-Setup.zip",
+    "language": [
+      "en-US"
+    ],
+    "isTrial": false
+  },
+  {
+    "id": "xdm-rt1",
+    "name": "Xtreme Download Manager",
+    "version": "8.0.29-rt1",
+    "author": "Subhra Das Gupta",
+    "uploader": "hamed7ir",
+    "source": "hamed7ir",
+    "category": "Utilities",
+    "description": "Xtreme Download Manager 8.0.29 packaged to run on Windows RT 8.0 and 8.1 and on Windows 10 ARM32, all on ARM32 hardware. It performs plain and multi-segment HTTP/HTTPS downloading with resume; the video-download feature is omitted because yt-dlp and ffmpeg are x86 processes that cannot execute on ARM32. This is an unofficial fork of subhra74/xdm by hamed7ir in which no source line is changed — the only modification is the application icon. It needs .NET Framework 4.5 or later and WPF, and because Windows RT does not ship WPF an ARM32 WPF build must be installed once with the included wpf-prerequisite\\wpf-setup.cmd before XDM will start.",
+    "dateOriginal": "2026-08-03",
+    "dateSource": "2026-08-03",
+    "size": "3023259",
+    "dependencies": [
+      ".NET Framework 4.5 or later — on Windows RT 8.1 install the RT-specific package https://go.microsoft.com/fwlink/?linkid=2088632, which appears afterwards as KB4486105",
+      "KB2919355, the Windows RT 8.1 Update — required before that .NET package will install",
+      "WPF for ARM32 — not bundled and not redistributable here; obtain the XDA ARM32 WPF port and install it once with the included wpf-prerequisite\\wpf-setup.cmd",
+      "Windows test-signing mode enabled on the device — the packages are unsigned desktop applications"
+    ],
+    "instructionSteps": [
+      "Install KB2919355, the Windows RT 8.1 Update, if it is not already present.",
+      "Install the .NET Framework package for Windows RT from https://go.microsoft.com/fwlink/?linkid=2088632 and reboot when it asks.",
+      "Put the device into Windows' test-signing mode so unsigned desktop applications can run.",
+      "Extract XDM-8.0.29-rt1-Setup-AnyCPU.zip, keeping Setup.exe and payload.zip together.",
+      "Download the ARM32 WPF port archive from https://xdaforums.com/t/wpf-for-windows-rt-devices.3763345/ and extract it next to wpf-prerequisite\\wpf-setup.cmd.",
+      "Run wpf-prerequisite\\wpf-setup.cmd /verify to see what is missing; it changes nothing and needs no administrator.",
+      "Run wpf-prerequisite\\wpf-setup.cmd as Administrator to install WPF.",
+      "Run Setup.exe --check to confirm everything is in place; it changes nothing.",
+      "Run Setup.exe to install XDM per user, then start XDM from the Start menu."
+    ],
+    "isImmersive": false,
+    "links": [
+      "https://github.com/hamed7ir/xdm",
+      "https://github.com/hamed7ir/xdm/releases/tag/8.0.29-rt1",
+      "https://github.com/subhra74/xdm",
+      "https://github.com/hamed7ir/xdm-bridge",
+      "https://github.com/hamed7ir/sqlite-interop-arm32",
+      "https://xdaforums.com/t/wpf-for-windows-rt-devices.3763345/"
+    ],
+    "architecture": "arm32",
+    "installParameters": [],
+    "DownloadPath": "Setup.exe",
+    "fileType": "zip",
+    "uninstallParameters": [],
+    "isPortable": false,
+    "compatibility": [
+      "8.0",
+      "8.1",
+      "10"
+    ],
+    "iconUrl": "https://raw.githubusercontent.com/hamed7ir/xdm/refs/heads/rt-arm32/app/XDM/XDM.Wpf.UI/xdm-logo.ico",
+    "screenshots": [
+      "https://github.com/user-attachments/assets/3cfbdd2f-a47e-4161-b7f3-62267be9100e"
+    ],
+    "downloadUrl": "https://github.com/hamed7ir/xdm/releases/download/8.0.29-rt1/XDM-8.0.29-rt1-Setup-AnyCPU.zip",
+    "language": [
+      "en-US",
+      "ar",
+      "zh-CN",
+      "zh-Hant",
+      "cs",
+      "fr",
+      "de",
+      "hu",
+      "id",
+      "it",
+      "ko",
+      "ne",
+      "pl",
+      "pt-BR",
+      "ro",
+      "ru",
+      "sr-Latn",
+      "sr-Cyrl",
+      "es",
+      "zh-TW",
+      "tr",
+      "uk",
+      "vi"
+    ],
+    "isTrial": false
+  }
+]
