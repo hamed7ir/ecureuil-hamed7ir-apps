@@ -21,6 +21,7 @@
     "Extract Varan-35.0.0-arm32-Setup.zip. It unpacks into a folder named Varan-Setup holding Setup.exe and payload.zip.",
     "Keep Setup.exe and payload.zip together in that folder, then run Setup.exe to perform the per-user install; it preserves the profile on removal.",
     "Launch Varan from its shortcut.",
+    "For YouTube, install the vorapis v3 extension from https://vorapis.pages.dev/#/home/download — it is third party and not bundled.",
     "(Recommended) Remove the old profile from %APPDATA% (C:\\Users\\<you>\\AppData\\Roaming) and start fresh."
   ],
   "isImmersive": false,

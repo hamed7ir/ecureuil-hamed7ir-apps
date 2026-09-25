@@ -1,0 +1,54 @@
+{
+  "id": "droidfinestra-x64",
+  "name": "DroidFinestra (x64)",
+  "version": "1.0.0",
+  "author": "hamed7ir",
+  "uploader": "hamed7ir",
+  "source": "hamed7ir",
+  "category": "Utilities",
+  "description": "DroidFinestra is a Windows GUI for scrcpy that mirrors and controls an Android phone over USB or Wi-Fi. It keeps per-device profiles, builds the scrcpy command line from the chosen profile, pairs phones over Wi-Fi and shows scrcpy's live output. This package carries the official scrcpy release with Google's adb and runs on 64-bit Windows 10 and 11; it needs the .NET Framework 4.0 and, for its adb, the Universal C Runtime, which both include. DroidFinestra launches scrcpy without modifying it; scrcpy is by Genymobile.",
+  "dateOriginal": "2026-09-25",
+  "dateSource": "2026-09-25",
+  "size": "13013504",
+  "dependencies": [
+    ".NET Framework 4.0 or later — built into Windows 10 and 11",
+    "Universal C Runtime — built into Windows 10 and 11; needed by the bundled adb",
+    "USB debugging enabled on the Android phone"
+  ],
+  "instructionSteps": [
+    "Run the installer. It installs per user into %LocalAppData%\\Programs\\DroidFinestra and needs no administrator rights; it checks the requirements first and reports anything missing.",
+    "At the SmartScreen warning choose More info, then Run anyway — the files are not signed.",
+    "On the phone, enable USB debugging (Developer options), then connect it by USB and accept the USB-debugging prompt on the phone.",
+    "In DroidFinestra choose New profile, start from a preset, and press Launch. DroidFinestra shows the scrcpy command line, then scrcpy's live output.",
+    "For Wi-Fi: on the phone open Wireless debugging and choose Pair device with pairing code; in DroidFinestra open the menu, choose Pair a phone over Wi-Fi, and enter the pairing address and code, then the connect address. Addresses are typed, not discovered."
+  ],
+  "isImmersive": false,
+  "links": [
+    "https://github.com/hamed7ir/DroidFinestra",
+    "https://github.com/hamed7ir/DroidFinestra/releases/tag/v1.0.0",
+    "https://github.com/hamed7ir/scrcpy-rt",
+    "https://github.com/hamed7ir/adb-rt",
+    "https://github.com/hamed7ir/ffmpeg-rt",
+    "https://github.com/Genymobile/scrcpy"
+  ],
+  "architecture": "x86-64",
+  "installParameters": [],
+  "DownloadPath": "DroidFinestra-Setup-1.0.0-x64.exe",
+  "fileType": "exe",
+  "uninstallParameters": [],
+  "isPortable": false,
+  "compatibility": [
+    "10",
+    "11"
+  ],
+  "iconUrl": "https://raw.githubusercontent.com/hamed7ir/DroidFinestra/refs/heads/main/DroidFinestra.ico",
+  "screenshots": [
+    "https://raw.githubusercontent.com/hamed7ir/DroidFinestra/refs/heads/main/Images/1.png",
+    "https://raw.githubusercontent.com/hamed7ir/DroidFinestra/refs/heads/main/Images/2.png"
+  ],
+  "downloadUrl": "https://github.com/hamed7ir/DroidFinestra/releases/download/v1.0.0/DroidFinestra-Setup-1.0.0-x64.exe",
+  "language": [
+    "en-US"
+  ],
+  "isTrial": false
+}

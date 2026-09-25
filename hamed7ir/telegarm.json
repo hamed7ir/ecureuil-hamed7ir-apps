@@ -6,7 +6,7 @@
   "uploader": "hamed7ir",
   "source": "hamed7ir",
   "category": "Utilities",
-  "description": "TelegArm is a Telegram client for Windows written entirely in managed C#. It speaks MTProto directly through the WTelegramClient library with no native Telegram component, and ships as a single AnyCPU + Prefer32Bit build that runs as a 32-bit process on ARM32 as well as x86, x64 and ARM64. It requires .NET Framework 4.7 or later; Windows RT 8.1 ships only 4.5, so that runtime must be installed first, and on ARM32 it has to come from the Open-RT redistributables mirror because Microsoft's own web installer serves no ARM32 build. It also runs on Windows RT 8.0 once the .NET Framework 4.8 update is installed, which is currently difficult to obtain for that version.",
+  "description": "TelegArm is a Telegram client for Windows written entirely in managed C#. It speaks MTProto directly through the WTelegramClient library with no native Telegram component, and one AnyCPU + Prefer32Bit build runs on ARM32 Windows RT 8.0 and 8.1 and Windows 10 ARM32, on x86 and x64 Windows 7 SP1 through 11, and on ARM64 Windows 10 and 11. It requires .NET Framework 4.7 or later: Windows RT 8.1 ships only 4.5, so the runtime must be installed first — on ARM32 from the Open-RT redistributables mirror, because Microsoft's web installer serves no ARM32 build — and RT 8.0 needs the .NET Framework 4.8 update, which is currently difficult to obtain there.",
   "dateOriginal": "2026-08-08",
   "dateSource": "2026-08-08",
   "size": "129129148",
@@ -22,7 +22,8 @@
     "Copy TelegArm-1.9.0-Setup-AnyCPU.zip to the device and extract it.",
     "Keep Setup.exe and payload.zip together in the same folder — Setup reads the payload from beside itself.",
     "Run Setup.exe, and press Check requirements first if you are unsure whether .NET 4.7 is present.",
-    "Let it install per user into %LocalAppData%\\Programs\\TelegArm; no administrator rights are needed."
+    "Let it install per user into %LocalAppData%\\Programs\\TelegArm; no administrator rights are needed.",
+    "On Windows 7, also install the Microsoft Visual C++ 2015 or later redistributable (x86) — TelegArm runs without it, but animated stickers stay still."
   ],
   "isImmersive": false,
   "links": [
@@ -31,16 +32,18 @@
     "https://github.com/wiz0u/WTelegramClient",
     "https://files.open-rt.party/Software/Redistributables/"
   ],
-  "architecture": "arm32",
+  "architecture": "neutral",
   "installParameters": [],
   "DownloadPath": "Setup.exe",
   "fileType": "zip",
   "uninstallParameters": [],
   "isPortable": false,
   "compatibility": [
+    "7",
     "8.0",
     "8.1",
-    "10"
+    "10",
+    "11"
   ],
   "iconUrl": "https://raw.githubusercontent.com/hamed7ir/TelegArm/refs/heads/main/img-icon/TelegArm.png",
   "screenshots": [

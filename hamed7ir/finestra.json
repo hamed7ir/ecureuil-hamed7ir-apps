@@ -6,7 +6,7 @@
   "uploader": "hamed7ir",
   "source": "hamed7ir",
   "category": "Utilities",
-  "description": "Finestra is a remote connection manager that runs RDP, SSH and SFTP/FTP/FTPS sessions as tabs in a single window, with a dual-pane file browser for the transfer protocols and an xterm-256color terminal for SSH. Its RDP engine is a modified build of FreeRDP 3.28.0 cross-compiled for ARM32 and x64; the 32-bit x86 engine is not bundled. One AnyCPU build covers Windows RT 8.1 on ARM32 and Windows 10/11 on ARM32, x86 and x64, and it requires .NET Framework 4.7 or later. It also runs on Windows RT 8.0 once the .NET Framework 4.8 update is installed, which is currently difficult to obtain for that version. The binaries are unsigned, and Windows RT needs a jailbroken device.",
+  "description": "Finestra is a remote connection manager that runs RDP, SSH and SFTP/FTP/FTPS sessions as tabs in a single window, with a dual-pane file browser for the transfer protocols and an xterm-256color terminal for SSH. One AnyCPU build runs on ARM32 Windows RT 8.0 and 8.1 and Windows 10 ARM32, and on x86 and x64 Windows 7 SP1 through 11; it requires .NET Framework 4.7 or later, and on RT 8.0 the .NET Framework 4.8 update, which is currently difficult to obtain there. Its RDP engine is a modified FreeRDP 3.28.0 bundled for ARM32 and x64; on 32-bit x86 Windows RDP needs a separately supplied engine, while SSH and file transfer work without it. The binaries are unsigned, and Windows RT needs a jailbroken device.",
   "dateOriginal": "2026-08-08",
   "dateSource": "2026-08-08",
   "size": "10353908",
@@ -31,16 +31,18 @@
     "https://github.com/hamed7ir/Finestra/releases",
     "https://github.com/hamed7ir/FreeRDP"
   ],
-  "architecture": "arm32",
+  "architecture": "neutral",
   "installParameters": [],
   "DownloadPath": "Setup.exe",
   "fileType": "zip",
   "uninstallParameters": [],
   "isPortable": false,
   "compatibility": [
+    "7",
     "8.0",
     "8.1",
-    "10"
+    "10",
+    "11"
   ],
   "iconUrl": "https://raw.githubusercontent.com/hamed7ir/Finestra/refs/heads/main/Finestra.ico",
   "screenshots": [

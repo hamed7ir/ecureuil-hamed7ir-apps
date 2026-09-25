@@ -1,0 +1,56 @@
+{
+  "id": "droidfinestra",
+  "name": "DroidFinestra",
+  "version": "1.0.0",
+  "author": "hamed7ir",
+  "uploader": "hamed7ir",
+  "source": "hamed7ir",
+  "category": "Utilities",
+  "description": "DroidFinestra is a Windows GUI for scrcpy that mirrors and controls an Android phone over USB or Wi-Fi. It keeps per-device profiles with presets such as \"Surface RT — balanced\", builds the scrcpy command line from the chosen profile, pairs phones over Wi-Fi and shows scrcpy's live output. This package carries scrcpy, adb and FFmpeg built for 32-bit ARM Windows (scrcpy-rt, adb-rt, ffmpeg-rt) and runs on Windows RT 8.0 and 8.1 and Windows 10 ARM32, needing only the .NET Framework 4.0 that Windows RT already includes. DroidFinestra launches scrcpy without modifying it; scrcpy is by Genymobile.",
+  "dateOriginal": "2026-09-25",
+  "dateSource": "2026-09-25",
+  "size": "9047040",
+  "dependencies": [
+    ".NET Framework 4.0 or later — built into Windows 8 and Windows RT",
+    "USB debugging enabled on the Android phone"
+  ],
+  "instructionSteps": [
+    "On Windows RT, jailbreak the device first — RT only runs unsigned desktop apps after the jailbreak.",
+    "Run the installer. It installs per user into %LocalAppData%\\Programs\\DroidFinestra and needs no administrator rights; it checks the requirements first and reports anything missing.",
+    "At the SmartScreen warning choose More info, then Run anyway — the files are not signed.",
+    "On the phone, enable USB debugging (Developer options), then connect it by USB and accept the USB-debugging prompt on the phone.",
+    "In DroidFinestra choose New profile, start from a preset, and press Launch. DroidFinestra shows the scrcpy command line, then scrcpy's live output.",
+    "For Wi-Fi: on the phone open Wireless debugging and choose Pair device with pairing code; in DroidFinestra open the menu, choose Pair a phone over Wi-Fi, and enter the pairing address and code, then the connect address. Addresses are typed, not discovered.",
+    "Keep --render-driver=direct3d on (every preset has it): without it the scrcpy window is black on Tegra 3 hardware such as the Surface RT."
+  ],
+  "isImmersive": false,
+  "links": [
+    "https://github.com/hamed7ir/DroidFinestra",
+    "https://github.com/hamed7ir/DroidFinestra/releases/tag/v1.0.0",
+    "https://github.com/hamed7ir/scrcpy-rt",
+    "https://github.com/hamed7ir/adb-rt",
+    "https://github.com/hamed7ir/ffmpeg-rt",
+    "https://github.com/Genymobile/scrcpy"
+  ],
+  "architecture": "arm32",
+  "installParameters": [],
+  "DownloadPath": "DroidFinestra-Setup-1.0.0-arm32.exe",
+  "fileType": "exe",
+  "uninstallParameters": [],
+  "isPortable": false,
+  "compatibility": [
+    "8.0",
+    "8.1",
+    "10"
+  ],
+  "iconUrl": "https://raw.githubusercontent.com/hamed7ir/DroidFinestra/refs/heads/main/DroidFinestra.ico",
+  "screenshots": [
+    "https://raw.githubusercontent.com/hamed7ir/DroidFinestra/refs/heads/main/Images/1.png",
+    "https://raw.githubusercontent.com/hamed7ir/DroidFinestra/refs/heads/main/Images/2.png"
+  ],
+  "downloadUrl": "https://github.com/hamed7ir/DroidFinestra/releases/download/v1.0.0/DroidFinestra-Setup-1.0.0-arm32.exe",
+  "language": [
+    "en-US"
+  ],
+  "isTrial": false
+}
