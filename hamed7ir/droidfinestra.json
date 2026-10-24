@@ -6,22 +6,22 @@
   "uploader": "hamed7ir",
   "source": "hamed7ir",
   "category": "Utilities",
-  "description": "DroidFinestra is a Windows GUI for scrcpy that mirrors and controls an Android phone over USB or Wi-Fi. It keeps per-device profiles with presets such as \"Surface RT — balanced\", builds the scrcpy command line from the chosen profile, pairs phones over Wi-Fi and shows scrcpy's live output. This package carries scrcpy, adb and FFmpeg built for 32-bit ARM Windows (scrcpy-rt, adb-rt, ffmpeg-rt) and runs on Windows RT 8.0 and 8.1 and Windows 10 ARM32, needing only the .NET Framework 4.0 that Windows RT already includes. DroidFinestra launches scrcpy without modifying it; scrcpy is by Genymobile.",
+  "description": "DroidFinestra lets you use your Android phone from Windows. It's a GUI for scrcpy, so you can see and control the phone over USB or Wi-Fi. You keep a profile for each phone (there are ready presets for the Surface RT), it builds the scrcpy command for you, pairs phones over Wi-Fi and shows scrcpy's output. This package has scrcpy, adb and FFmpeg built for 32-bit ARM Windows (scrcpy-rt, adb-rt, ffmpeg-rt), and it runs on Windows RT 8.0 and 8.1 and Windows 10 ARM32. It only needs .NET Framework 4.0, which Windows RT already has. DroidFinestra starts scrcpy but doesn't change it. scrcpy is made by Genymobile.",
   "dateOriginal": "2026-09-25",
   "dateSource": "2026-09-25",
   "size": "9047040",
   "dependencies": [
-    ".NET Framework 4.0 or later — built into Windows 8 and Windows RT",
-    "USB debugging enabled on the Android phone"
+    ".NET Framework 4.0 or newer. Windows 8 and Windows RT already have it.",
+    "USB debugging turned on, on the Android phone."
   ],
   "instructionSteps": [
-    "On Windows RT, jailbreak the device first — RT only runs unsigned desktop apps after the jailbreak.",
-    "Run the installer. It installs per user into %LocalAppData%\\Programs\\DroidFinestra and needs no administrator rights; it checks the requirements first and reports anything missing.",
-    "At the SmartScreen warning choose More info, then Run anyway — the files are not signed.",
-    "On the phone, enable USB debugging (Developer options), then connect it by USB and accept the USB-debugging prompt on the phone.",
-    "In DroidFinestra choose New profile, start from a preset, and press Launch. DroidFinestra shows the scrcpy command line, then scrcpy's live output.",
-    "For Wi-Fi: on the phone open Wireless debugging and choose Pair device with pairing code; in DroidFinestra open the menu, choose Pair a phone over Wi-Fi, and enter the pairing address and code, then the connect address. Addresses are typed, not discovered.",
-    "Keep --render-driver=direct3d on (every preset has it): without it the scrcpy window is black on Tegra 3 hardware such as the Surface RT."
+    "On Windows RT, jailbreak the device first. RT only runs unsigned desktop apps after a jailbreak.",
+    "Run the installer. It installs for your user only into %LocalAppData%\\Programs\\DroidFinestra and doesn't need admin. It checks the requirements first and tells you if something is missing.",
+    "The files are not signed, so SmartScreen warns the first time. Click More info, then Run anyway.",
+    "On the phone, turn on USB debugging (in Developer options), connect it by USB and accept the USB debugging prompt on the phone.",
+    "In DroidFinestra choose New profile, start from a preset and press Launch. You see the scrcpy command line first, then scrcpy's live output.",
+    "For Wi-Fi: on the phone open Wireless debugging and choose Pair device with pairing code. In DroidFinestra open the menu, choose Pair a phone over Wi-Fi, and type the pairing address and code, then the connect address. You type the addresses, they are not found automatically.",
+    "Keep --render-driver=direct3d on. Every preset has it, and without it the scrcpy window is black on Tegra 3 tablets like the Surface RT."
   ],
   "isImmersive": false,
   "links": [

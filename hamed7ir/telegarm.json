@@ -1,41 +1,41 @@
 {
   "id": "telegarm",
   "name": "TelegArm",
-  "version": "1.9.0",
+  "version": "2.0.0",
   "author": "hamed7ir",
   "uploader": "hamed7ir",
   "source": "hamed7ir",
   "category": "Utilities",
-  "description": "TelegArm is a Telegram client for Windows written entirely in managed C#. It speaks MTProto directly through the WTelegramClient library with no native Telegram component, and one AnyCPU + Prefer32Bit build runs on ARM32 Windows RT 8.0 and 8.1 and Windows 10 ARM32, on x86 and x64 Windows 7 SP1 through 11, and on ARM64 Windows 10 and 11. It requires .NET Framework 4.7 or later: Windows RT 8.1 ships only 4.5, so the runtime must be installed first — on ARM32 from the Open-RT redistributables mirror, because Microsoft's web installer serves no ARM32 build — and RT 8.0 needs the .NET Framework 4.8 update, which is currently difficult to obtain there.",
-  "dateOriginal": "2026-08-08",
-  "dateSource": "2026-08-08",
-  "size": "129129148",
+  "description": "TelegArm is a Telegram client for Windows RT and Windows 10 ARM32. The official Telegram apps don't run on these devices anymore, so I made this one. It runs on normal Windows PCs too. It's written in C# and talks to Telegram with WTelegramClient. Voice calls, video calls and group voice chats use Telegram's own call library (tgcalls), and videos and music play with FFmpeg. One build runs on Windows RT 8.0 and 8.1, Windows 10 ARM32, and Windows 8.1, 10 and 11 (x86, x64 and ARM64). Calls need Windows 8.1 or newer. Windows 7 is not tested yet, and calls don't work there. You need .NET Framework 4.7 or newer. Windows RT 8.1 comes with 4.5, so install 4.7 first, and RT 8.0 needs the .NET 4.8 update, which is hard to find.",
+  "dateOriginal": "2026-10-16",
+  "dateSource": "2026-10-16",
+  "size": "45235712",
   "dependencies": [
-    "Microsoft .NET Framework 4.7 or later",
-    "Windows RT 8.0 only: the .NET Framework 4.8 update must be installed before the app will start. It is currently difficult to obtain for RT 8.0."
+    ".NET Framework 4.7 or newer",
+    "Windows RT 8.0 only: the .NET Framework 4.8 update. It's hard to find for RT 8.0 right now.",
+    "Windows 8.1 or newer for voice and video calls"
   ],
   "instructionSteps": [
-    "On Windows RT 8.1, jailbreak the device first — RT only runs unsigned desktop apps after the jailbreak.",
-    "On Windows RT 8.1, install .NET Framework 4.7 from https://files.open-rt.party/Software/Redistributables/ — Microsoft's own web installer serves no ARM32 build.",
-    "On Windows 10 ARM32 .NET 4.7 is already present; no action is needed.",
-    "On Windows RT 8.0, install the .NET Framework 4.8 update first — the app will not start without it, and it is currently difficult to obtain for that version.",
-    "Copy TelegArm-1.9.0-Setup-AnyCPU.zip to the device and extract it.",
-    "Keep Setup.exe and payload.zip together in the same folder — Setup reads the payload from beside itself.",
-    "Run Setup.exe, and press Check requirements first if you are unsure whether .NET 4.7 is present.",
-    "Let it install per user into %LocalAppData%\\Programs\\TelegArm; no administrator rights are needed.",
-    "On Windows 7, also install the Microsoft Visual C++ 2015 or later redistributable (x86) — TelegArm runs without it, but animated stickers stay still."
+    "On Windows RT, jailbreak the device first. RT only runs unsigned desktop apps after a jailbreak.",
+    "Install .NET Framework 4.7 or newer first. On Windows RT 8.1 get it here: https://go.microsoft.com/fwlink/?linkid=2088632. Windows 10 ARM32 already has it.",
+    "On Windows RT 8.0 install the .NET Framework 4.8 update first. The app won't start without it, and it's hard to find for RT 8.0 right now.",
+    "Run TelegArm-2.0.0-Setup.exe. It checks .NET for you and gives you the link if it's missing.",
+    "Voice and video calls need Windows 8.1 or newer.",
+    "On Windows 7 also install the Microsoft Visual C++ 2015 or newer redistributable (x86). TelegArm works without it, but animated stickers won't move.",
+    "Upgrading from 1.9: your accounts and settings carry over."
   ],
   "isImmersive": false,
   "links": [
     "https://github.com/hamed7ir/TelegArm",
-    "https://github.com/hamed7ir/TelegArm/releases/tag/v1.9.0",
+    "https://github.com/hamed7ir/TelegArm/releases/tag/v2.0.0",
     "https://github.com/wiz0u/WTelegramClient",
-    "https://files.open-rt.party/Software/Redistributables/"
+    "https://github.com/TelegramMessenger/tgcalls",
+    "https://go.microsoft.com/fwlink/?linkid=2088632"
   ],
   "architecture": "neutral",
   "installParameters": [],
-  "DownloadPath": "Setup.exe",
-  "fileType": "zip",
+  "DownloadPath": "TelegArm-2.0.0-Setup.exe",
+  "fileType": "exe",
   "uninstallParameters": [],
   "isPortable": false,
   "compatibility": [
@@ -47,9 +47,10 @@
   ],
   "iconUrl": "https://raw.githubusercontent.com/hamed7ir/TelegArm/refs/heads/main/img-icon/TelegArm.png",
   "screenshots": [
-    "https://github.com/user-attachments/assets/abbcc303-0894-43a4-b826-63c3cc1695cf"
+    "https://github.com/user-attachments/assets/13e1cb64-64ef-45fb-88b3-8e3fc08cbcf4",
+    "https://raw.githubusercontent.com/hamed7ir/TelegArm/refs/heads/main/media/teaser.gif"
   ],
-  "downloadUrl": "https://github.com/hamed7ir/TelegArm/releases/download/v1.9.0/TelegArm-1.9.0-Setup-AnyCPU.zip",
+  "downloadUrl": "https://github.com/hamed7ir/TelegArm/releases/download/v2.0.0/TelegArm-2.0.0-Setup.exe",
   "language": [
     "en-US"
   ],

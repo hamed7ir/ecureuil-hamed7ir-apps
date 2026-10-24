@@ -1,42 +1,39 @@
 {
   "id": "csray",
   "name": "CS-Ray",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "author": "hamed7ir",
   "uploader": "hamed7ir",
   "source": "hamed7ir",
   "category": "Utilities",
-  "description": "CS-Ray is a proxy client written entirely in managed C# (.NET Framework 4.7, WinForms) with a hand-written userspace TUN TCP/IP netstack, so that a VLESS/VMess/Shadowsocks client can run on legacy ARM32 Windows, where the native proxy cores have no builds. It handles VLESS, VMess (AEAD), Shadowsocks (AEAD), SOCKS5 and HTTP(S) outbounds over raw TCP, TLS 1.2, WebSocket-over-TLS and XHTTP, exposes a mixed SOCKS5+HTTP inbound on 127.0.0.1:10810, and provides system-proxy and full-tunnel (Wintun) modes. The same AnyCPU build runs on ARM32 Windows RT 8.0 and 8.1 and Windows 10 ARM32, and on x86 and x64 Windows 7 and later; on Windows 7 only system-proxy mode works, because the bundled Wintun driver needs Windows 8, and RT 8.0 needs the .NET Framework 4.8 update. REALITY, uTLS, XTLS, ECH and QUIC-based transports are not supported because of the managed-TLS ceiling. The project describes itself as alpha software.",
-  "dateOriginal": "2026-07-08",
-  "dateSource": "2026-07-08",
-  "size": "6649189",
+  "description": "CS-Ray is a proxy client for Windows that I wrote fully in C#. There is no xray.exe or sing-box inside it. The protocols, the TLS and the TUN network stack are all managed .NET code, so it runs on old ARM32 Windows where v2rayN and the other clients can't. It supports VLESS over TCP, WebSocket and XHTTP with TLS or REALITY and XTLS Vision, VMess (AEAD), Shadowsocks (AEAD), and SOCKS5 or HTTP(S) servers. You get a local proxy on 127.0.0.1:10810 with two modes on top: system proxy, or a full tunnel (Wintun) that takes all the traffic of the PC. Links it can't run yet (Trojan, Hysteria, TUIC, gRPC) still get imported, greyed out with the reason. One build runs on Windows RT 8.0 and 8.1, Windows 10 ARM32, and x86 and x64 Windows 7 and newer. On Windows 7 only system proxy mode works, because the Wintun driver needs Windows 8. RT 8.0 needs the .NET 4.8 update.",
+  "dateOriginal": "2026-10-13",
+  "dateSource": "2026-10-13",
+  "size": "5053952",
   "dependencies": [
-    ".NET Framework 4.7",
-    "Windows RT 8.0 only: the .NET Framework 4.8 update must be installed before the app will start. It is currently difficult to obtain for RT 8.0."
+    ".NET Framework 4.7 or newer",
+    "Windows RT 8.0 only: the .NET Framework 4.8 update. It's hard to find for RT 8.0 right now."
   ],
   "instructionSteps": [
-    "On Windows RT 8.1, jailbreak the device first — RT only runs unsigned desktop apps after the jailbreak.",
-    "Make sure .NET Framework 4.7 is installed on the device.",
-    "On Windows RT 8.0, install the .NET Framework 4.8 update first — the app will not start without it, and it is currently difficult to obtain for that version.",
-    "Extract CS-Ray-1.1.0-Setup-AnyCPU.zip.",
-    "Run Setup.exe — it installs per user and does not need administrator rights.",
-    "If SmartScreen warns about an unknown publisher, choose More info, then Run anyway; the build is unsigned.",
-    "Start CS-Ray and add a server with a vless://, vmess://, ss://, socks:// or http(s):// link, or add a subscription URL in Settings.",
-    "Select a server in the list and press Start Engine; the local SOCKS5+HTTP inbound listens on 127.0.0.1:10810.",
-    "Turn on System proxy for browsers and WinINET apps — no elevation is needed.",
-    "Turn on Full tunnel (TUN) only if you want whole-device capture, and approve the administrator prompt it raises.",
-    "On Windows 7, use System proxy mode — Full tunnel (TUN) needs Windows 8 or later, because the bundled Wintun driver does."
+    "On Windows RT, jailbreak the device first. RT only runs unsigned desktop apps after a jailbreak.",
+    "You need .NET Framework 4.7 or newer. Windows 10 and 11 already have it. If you're not sure, the installer has a Check requirements button.",
+    "On Windows RT 8.0 install the .NET Framework 4.8 update first. The app won't start without it, and it's hard to find for RT 8.0 right now.",
+    "Run CS-Ray-Setup-2.0.0.exe. It installs only for your user (to %LocalAppData%\\Programs\\CS-Ray) and doesn't need admin.",
+    "Add a server from a link or add a subscription, pick a server and start it. The local SOCKS5 and HTTP proxy is on 127.0.0.1:10810.",
+    "System proxy mode never needs admin. Full tunnel asks for admin (UAC) because it makes a Wintun network adapter. When you're done, close CS-Ray from the tray icon (Exit) so it can remove the adapter and the routes.",
+    "On Windows 7 use system proxy mode. Full tunnel needs Windows 8 or newer, because the Wintun driver does."
   ],
   "isImmersive": false,
   "links": [
     "https://github.com/hamed7ir/CS-Ray",
-    "https://github.com/hamed7ir/CS-Ray/releases/tag/v1.1.0",
-    "https://www.wintun.net/"
+    "https://github.com/hamed7ir/CS-Ray/releases/tag/v2.0.0",
+    "https://www.wintun.net/",
+    "https://github.com/XTLS/Xray-core"
   ],
   "architecture": "neutral",
   "installParameters": [],
-  "DownloadPath": "Setup.exe",
-  "fileType": "zip",
+  "DownloadPath": "CS-Ray-Setup-2.0.0.exe",
+  "fileType": "exe",
   "uninstallParameters": [],
   "isPortable": false,
   "compatibility": [
@@ -47,10 +44,8 @@
     "11"
   ],
   "iconUrl": "https://raw.githubusercontent.com/hamed7ir/CS-Ray/refs/heads/main/CS-Ray/icon/icon.ico",
-  "screenshots": [
-    "https://github.com/user-attachments/assets/97aee84b-15c2-4f84-b416-50152570de62"
-  ],
-  "downloadUrl": "https://github.com/hamed7ir/CS-Ray/releases/download/v1.1.0/CS-Ray-1.1.0-Setup-AnyCPU.zip",
+  "screenshots": [],
+  "downloadUrl": "https://github.com/hamed7ir/CS-Ray/releases/download/v2.0.0/CS-Ray-Setup-2.0.0.exe",
   "language": [
     "en-US"
   ],

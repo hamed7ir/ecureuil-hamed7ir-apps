@@ -1,96 +1,97 @@
 # ecureuil-hamed7ir-apps
 
-An [Ecureuil](https://github.com/fraaaaa4/ecureuil) source listing applications for **Windows RT** and
-**ARM32 Windows**, built and tested on Surface RT and Surface 2 hardware. Several of them also run on
-x86 and x64 Windows.
+This is my source for [Ecureuil](https://github.com/fraaaaa4/ecureuil), the app store for Windows RT made
+by fratta. It lists my apps for Windows RT and ARM32 Windows. I made and tested them on a Surface RT and a
+Surface 2. Some of them run on normal x86 and x64 Windows too.
 
-This repository is not a download host. It publishes JSON over GitHub Pages; Ecureuil reads that JSON
-and downloads each application from its own GitHub release.
+This repo doesn't host the downloads. It's just JSON on GitHub Pages. Ecureuil reads it and downloads
+each app from its own GitHub release.
 
-## What is in it
+## What's in it
 
-Seven applications, eight entries — DroidFinestra ships separate ARM32 and x64 builds.
+8 apps, 10 entries. DroidFinestra and Venetium have a separate ARM32 build and a separate x86 / x64
+build, so each of them is two entries.
 
-| Application | Version | Category | Architecture | Runs on |
+| App | Version | Category | Architecture | Runs on |
 |---|---|---|---|---|
-| [Finestra](https://github.com/hamed7ir/Finestra) — RDP / SSH / SFTP / FTP / FTPS client | 1.0.3 | Utilities | neutral | RT 8.0, RT 8.1, Windows 10 ARM32; x86/x64 Windows 7–11 |
-| [TelegArm](https://github.com/hamed7ir/TelegArm) — Telegram client | 1.9.0 | Utilities | neutral | RT 8.0, RT 8.1, Windows 10 ARM32; x86/x64 Windows 7–11; ARM64 Windows 10–11 |
-| [CS-Ray](https://github.com/hamed7ir/CS-Ray) — proxy client with a userspace TUN netstack | 1.1.0 | Utilities | neutral | RT 8.0, RT 8.1, Windows 10 ARM32; x86/x64 Windows 7–11 |
-| [DroidFinestra](https://github.com/hamed7ir/DroidFinestra) — GUI for scrcpy (Android phone mirroring) | 1.0.0 | Utilities | arm32 | RT 8.0, RT 8.1, Windows 10 ARM32 |
-| [DroidFinestra (x64)](https://github.com/hamed7ir/DroidFinestra) — the same app, x64 build | 1.0.0 | Utilities | x86-64 | 64-bit Windows 10–11 |
-| [Xtreme Download Manager](https://github.com/hamed7ir/xdm) — download manager (fork of [subhra74/xdm](https://github.com/subhra74/xdm)) | 8.0.29-rt1 | Utilities | arm32 | RT 8.0, RT 8.1, Windows 10 ARM32 |
-| [Lite XL](https://github.com/hamed7ir/lite-xl-rt) — text editor (unofficial ARM32 build of [lite-xl](https://github.com/lite-xl/lite-xl)) | 2.1.8-arm32 | Development | arm32 | RT 8.0, RT 8.1, Windows 10 ARM32 |
-| [Varan](https://github.com/hamed7ir/varan) — web browser (fork of [Pale Moon](https://www.palemoon.org/)) | 1.1 | Utilities | arm32 | RT 8.0, RT 8.1, Windows 10 ARM32 |
+| [Finestra](https://github.com/hamed7ir/Finestra): RDP, SSH, SFTP, FTP and FTPS client | 2.0.0 | Utilities | neutral | RT 8.0, RT 8.1, Windows 10 ARM32, x86 / x64 Windows 10 and 11 |
+| [TelegArm](https://github.com/hamed7ir/TelegArm): Telegram client with calls | 2.0.0 | Utilities | neutral | RT 8.0, RT 8.1, Windows 10 ARM32, Windows 8.1 to 11 (x86, x64, ARM64), Windows 7 without calls |
+| [CS-Ray](https://github.com/hamed7ir/CS-Ray): proxy client (VLESS, REALITY, VMess, Shadowsocks) | 2.0.0 | Utilities | neutral | RT 8.0, RT 8.1, Windows 10 ARM32, x86 / x64 Windows 7 to 11 |
+| [Venetium](https://github.com/hamed7ir/venetium): Chromium 150 browser | 1.2 | Utilities | arm32 | Windows 10 ARM32 (build 15035) |
+| [Venetium (x86)](https://github.com/hamed7ir/venetium): the same browser, x86 build | 1.2 | Utilities | x86-32 | Windows 10 and 11 |
+| [DroidFinestra](https://github.com/hamed7ir/DroidFinestra): use your Android phone from Windows (scrcpy GUI) | 1.0.0 | Utilities | arm32 | RT 8.0, RT 8.1, Windows 10 ARM32 |
+| [DroidFinestra (x64)](https://github.com/hamed7ir/DroidFinestra): the same app, x64 build | 1.0.0 | Utilities | x86-64 | 64-bit Windows 10 and 11 |
+| [Xtreme Download Manager](https://github.com/hamed7ir/xdm): download manager, my fork of [subhra74/xdm](https://github.com/subhra74/xdm) | 8.0.29-rt1 | Utilities | arm32 | RT 8.0, RT 8.1, Windows 10 ARM32 |
+| [Lite XL](https://github.com/hamed7ir/lite-xl-rt): text editor, my ARM32 build of [lite-xl](https://github.com/lite-xl/lite-xl) | 2.1.8-arm32 | Development | arm32 | RT 8.0, RT 8.1, Windows 10 ARM32 |
+| [Varan](https://github.com/hamed7ir/varan): web browser, my fork of [Pale Moon](https://www.palemoon.org/) | 1.1 | Utilities | arm32 | RT 8.0, RT 8.1, Windows 10 ARM32 |
 
-**`neutral`** marks an application whose single download runs on every architecture — Finestra,
-TelegArm and CS-Ray are AnyCPU .NET builds. Ecureuil treats `neutral` as compatible on any device, so
-each stays one entry instead of being listed once per architecture. DroidFinestra is different: its
-ARM32 and x64 packages carry different native scrcpy and adb builds, so it is two entries.
+**neutral** means one download works on every architecture. Finestra, TelegArm and CS-Ray are AnyCPU
+.NET apps, so each of them is one entry, and Ecureuil shows it as compatible on any PC.
 
-Where a project also publishes a portable package, it is on that project's release page rather than in
-this catalog.
+If a project also has a portable zip, you find it on that project's release page. This list only has
+the installers.
 
-## How to add this source in Ecureuil
+## How to add it in Ecureuil
 
-It is listed under **Discover Sources**. To add it by hand, open the **Sources** tab and paste:
+It's in **Discover Sources**. You can also add it by hand: open the **Sources** tab and paste this:
 
 ```
 https://hamed7ir.github.io/ecureuil-hamed7ir-apps/sources.json
 ```
 
-Ecureuil caches a source for 24 hours. After a catalog update, press **Refresh** in the source's details
-to see it straight away.
+Ecureuil keeps a source for 24 hours before it checks again. After I update the list, press **Refresh**
+in the source details if you want to see it right away.
 
 ## Before you install
 
-Several of these applications need a one-time setup that is not bundled and cannot be:
+Some of these apps need things that I can't put in the download:
 
-- **Windows RT** runs unsigned desktop applications only after the jailbreak.
-- **Finestra, TelegArm, CS-Ray** need **.NET Framework 4.7**. Windows RT 8.1 ships 4.5, and Microsoft's
-  web installer serves no ARM32 build. On **RT 8.0** they need the **.NET Framework 4.8 update**, which is
-  currently difficult to obtain for that version.
-- On **Windows 7**, CS-Ray works in system-proxy mode only — its full-tunnel mode uses the Wintun driver,
-  which needs Windows 8 or later. TelegArm needs the Visual C++ 2015+ redistributable (x86) there for
-  animated stickers.
-- **DroidFinestra** needs **USB debugging** enabled on the phone. Pick the package that matches the PC:
-  the ARM32 one for Windows RT and ARM32 Windows, the x64 one for 64-bit Windows 10 and 11.
-- **XDM** additionally needs **WPF for ARM32**, which is Microsoft's and is not redistributed here.
-- **Varan** needs the **Microsoft Visual C++ 2015 or later redistributable for ARM32**, and YouTube in
-  Varan needs the third-party vorapis extension.
+- **Windows RT** only runs unsigned desktop apps after a jailbreak.
+- **Finestra, TelegArm and CS-Ray** need **.NET Framework 4.7** or newer. Windows RT 8.1 comes with 4.5,
+  so install 4.7 first. On **RT 8.0** you need the **.NET Framework 4.8 update**, and it's hard to find
+  for RT 8.0 right now.
+- **TelegArm** calls need Windows 8.1 or newer.
+- On **Windows 7**, CS-Ray only works in system proxy mode, because its full tunnel uses the Wintun
+  driver and that needs Windows 8. TelegArm on Windows 7 needs the Visual C++ 2015 or newer
+  redistributable (x86) for animated stickers, and calls don't work there.
+- **DroidFinestra** needs **USB debugging** turned on, on the phone. Pick the build for your PC: ARM32
+  for Windows RT and ARM32 Windows, x64 for 64-bit Windows 10 and 11.
+- **Venetium** for ARM32 needs Windows 10 build 15035. Windows RT 8.0 and 8.1 are not supported yet.
+- **XDM** needs **WPF for ARM32**. It's Microsoft's, so I can't share it here.
+- **Varan** needs the **Microsoft Visual C++ 2015 or newer redistributable for ARM32**, and YouTube in
+  Varan needs the vorapis extension.
 - **Varan** and **XDM** need the device in **test-signing mode**.
-- **Lite XL** needs nothing: it links the C runtime statically, and only its installer uses
-  .NET Framework 4.0, which is in-box on RT.
+- **Lite XL** needs nothing. Only its installer uses .NET Framework 4.0, and Windows RT already has it.
 
-Each entry carries its own step-by-step instructions; read them in the client before installing.
+Every entry has its own install steps. Read them in Ecureuil before you install.
 
-## Layout
+## How the list is made
 
 ```
-sources.json                        the source record Ecureuil reads first
-hamed7ir/*.json                     one file per installable package
-source-name-index.json              generated by .github/workflows/build-catalogs.yml, committed by the bot
+sources.json                        the source record, Ecureuil reads this first
+hamed7ir/*.json                     one file per installer
+source-name-index.json              made by .github/workflows/build-catalogs.yml, the bot commits it
 ```
 
-Do not edit `source-name-index.json` by hand — the workflow rebuilds it from `hamed7ir/*.json` on every
-push to that folder.
+Don't edit `source-name-index.json` by hand. The workflow builds it again from `hamed7ir/*.json` every
+time something in that folder changes.
 
-## Reporting a broken entry
+## If something is wrong
 
-Open an issue **here** if the catalog is wrong: a bad size, a dead download, a wrong install path, a
-missing prerequisite, a wrong supported-OS list.
+Open an issue **here** if the list is wrong: a bad size, a dead download, wrong install steps, a missing
+requirement, or the wrong Windows versions.
 
-Open an issue on the **application's own repository** (linked in the table above) if the application
-itself misbehaves. For XDM, Lite XL and Varan, please do not report ARM32 problems to their upstream
-projects — they do not build for this target.
+Open an issue in the **app's own repo** (linked in the table) if the app itself has a problem. For XDM,
+Lite XL and Varan, please don't report ARM32 problems to the original projects. They don't make ARM32
+builds.
 
 ## Credits
 
-[Ecureuil](https://github.com/fraaaaa4/ecureuil) and its source format are by
-**fratta** ([@fraaaaa4](https://github.com/fraaaaa4)). This repository follows the layout and the
-`build-catalogs.yml` pipeline from his
-[Ecureuil-fratta-apps](https://github.com/fraaaaa4/Ecureuil-fratta-apps) source.
+[Ecureuil](https://github.com/fraaaaa4/ecureuil) and its source format are made by **fratta**
+([@fraaaaa4](https://github.com/fraaaaa4)). This repo uses the same layout and the same
+`build-catalogs.yml` as his [Ecureuil-fratta-apps](https://github.com/fraaaaa4/Ecureuil-fratta-apps).
 
-XDM is by **Subhra Das Gupta**; Lite XL is by the **Lite XL Team** and derives from rxi's lite; Varan
-is a fork of **Pale Moon** by Moonchild Productions, and is neither endorsed by nor affiliated with
-them. DroidFinestra launches **scrcpy** by Genymobile without modifying it. The ports in this catalog
-are packaged by hamed7ir; the upstream authors are credited in each entry.
+XDM is made by **Subhra Das Gupta**. Lite XL is made by the **Lite XL Team** and comes from rxi's lite.
+Varan is a fork of **Pale Moon** by Moonchild Productions, and they don't make or support it. Venetium is
+built on **Supermium** and **ungoogled Chromium**. DroidFinestra starts **scrcpy** by Genymobile and
+doesn't change it. Each entry credits the original authors too.

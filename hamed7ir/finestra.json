@@ -1,44 +1,42 @@
 {
   "id": "finestra",
   "name": "Finestra",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "author": "hamed7ir",
   "uploader": "hamed7ir",
   "source": "hamed7ir",
   "category": "Utilities",
-  "description": "Finestra is a remote connection manager that runs RDP, SSH and SFTP/FTP/FTPS sessions as tabs in a single window, with a dual-pane file browser for the transfer protocols and an xterm-256color terminal for SSH. One AnyCPU build runs on ARM32 Windows RT 8.0 and 8.1 and Windows 10 ARM32, and on x86 and x64 Windows 7 SP1 through 11; it requires .NET Framework 4.7 or later, and on RT 8.0 the .NET Framework 4.8 update, which is currently difficult to obtain there. Its RDP engine is a modified FreeRDP 3.28.0 bundled for ARM32 and x64; on 32-bit x86 Windows RDP needs a separately supplied engine, while SSH and file transfer work without it. The binaries are unsigned, and Windows RT needs a jailbroken device.",
-  "dateOriginal": "2026-08-08",
-  "dateSource": "2026-08-08",
-  "size": "10353908",
+  "description": "Finestra is a remote connection manager: RDP, SSH, SFTP, FTP and FTPS in one app, with tabs. I made it mainly for Windows RT, because there is no good modern remote desktop client for it. For RDP it uses FreeRDP 3.32.2 (the SDL3 client) with my changes, built for ARM32 and x64. On a touch screen there is a Touch / Mouse switch, so swipe and pinch go to the remote PC. One build runs on Windows RT 8.0 and 8.1, Windows 10 ARM32, and x86 and x64 Windows 10 and 11. You need .NET Framework 4.7 or newer, and on RT 8.0 that means the .NET 4.8 update, which is hard to find right now. On 32-bit x86 Windows you have to add the RDP engine yourself, SSH and FTP work without it. The files are not signed, and Windows RT has to be jailbroken.",
+  "dateOriginal": "2026-10-23",
+  "dateSource": "2026-10-23",
+  "size": "14972928",
   "dependencies": [
-    ".NET Framework 4.7 or later",
-    "Windows RT 8.0 only: the .NET Framework 4.8 update must be installed before the app will start. It is currently difficult to obtain for RT 8.0."
+    ".NET Framework 4.7 or newer",
+    "Windows RT 8.0 only: the .NET Framework 4.8 update. It's hard to find for RT 8.0 right now."
   ],
   "instructionSteps": [
-    "Install .NET Framework 4.7 or later if the device does not already have it.",
-    "On Windows RT 8.0, install the .NET Framework 4.8 update first — the app will not start without it, and it is currently difficult to obtain for that version.",
-    "On Windows RT 8.1, jailbreak the device first — RT only runs unsigned desktop apps after the jailbreak.",
-    "Extract Finestra-Setup-1.0.3.zip to any folder.",
-    "Keep Setup.exe and payload.zip together in that folder — Setup.exe reads payload.zip from beside itself.",
-    "Run Setup.exe. It installs per user into %LocalAppData%\\Programs\\Finestra and needs no administrator rights.",
-    "At the SmartScreen warning choose More info, then Run anyway — the binaries are unsigned.",
-    "Start Finestra from its Start-menu shortcut.",
-    "On 32-bit x86 Windows only, drop a 32-bit wfreerdp.exe into engine\\x86\\ to enable RDP."
+    "Install .NET Framework 4.7 or newer if you don't have it. Windows 10 1703 and later already have it.",
+    "On Windows RT 8.0 install the .NET Framework 4.8 update first. The app won't start without it, and it's hard to find for RT 8.0 right now.",
+    "On Windows RT, jailbreak the device first. RT only runs unsigned desktop apps after a jailbreak.",
+    "Run Finestra-Setup-2.0.0.exe. It installs for your user only into %LocalAppData%\\Programs\\Finestra, with no admin needed. You get a Start menu shortcut and an uninstall entry.",
+    "The files are not signed, so SmartScreen warns the first time. Click More info, then Run anyway.",
+    "Upgrading from 1.0.3: install into the same folder and your connections and settings are kept. If you set your own engine path in Settings > RDP engine, clear it, or you keep the old engine.",
+    "On a touch screen RDP starts in Touch mode. You can change it with the switch on the tab bar or in Settings > Session.",
+    "On 32-bit x86 Windows you have to add the RDP engine yourself. Read README.txt in engine\\x86. SSH and FTP work without it."
   ],
   "isImmersive": false,
   "links": [
     "https://github.com/hamed7ir/Finestra",
-    "https://github.com/hamed7ir/Finestra/releases",
-    "https://github.com/hamed7ir/FreeRDP"
+    "https://github.com/hamed7ir/Finestra/releases/tag/v2.0.0",
+    "https://github.com/hamed7ir/FreeRDP/tree/finestra-arm32-rt-3.32"
   ],
   "architecture": "neutral",
   "installParameters": [],
-  "DownloadPath": "Setup.exe",
-  "fileType": "zip",
+  "DownloadPath": "Finestra-Setup-2.0.0.exe",
+  "fileType": "exe",
   "uninstallParameters": [],
   "isPortable": false,
   "compatibility": [
-    "7",
     "8.0",
     "8.1",
     "10",
@@ -51,7 +49,7 @@
     "https://raw.githubusercontent.com/hamed7ir/Finestra/refs/heads/main/docs/session-tabs2.jpg",
     "https://raw.githubusercontent.com/hamed7ir/Finestra/refs/heads/main/docs/about.png"
   ],
-  "downloadUrl": "https://github.com/hamed7ir/Finestra/releases/download/v1.0.3/Finestra-Setup-1.0.3.zip",
+  "downloadUrl": "https://github.com/hamed7ir/Finestra/releases/download/v2.0.0/Finestra-Setup-2.0.0.exe",
   "language": [
     "en-US"
   ],

@@ -6,26 +6,26 @@
   "uploader": "hamed7ir",
   "source": "hamed7ir",
   "category": "Utilities",
-  "description": "Xtreme Download Manager 8.0.29 packaged to run on Windows RT 8.0 and 8.1 and on Windows 10 ARM32, all on ARM32 hardware. It performs plain and multi-segment HTTP/HTTPS downloading with resume; the video-download feature is omitted because yt-dlp and ffmpeg are x86 processes that cannot execute on ARM32. This is an unofficial fork of subhra74/xdm by hamed7ir in which no source line is changed — the only modification is the application icon. It needs .NET Framework 4.5 or later and WPF, and because Windows RT does not ship WPF an ARM32 WPF build must be installed once with the included wpf-prerequisite\\wpf-setup.cmd before XDM will start.",
+  "description": "Xtreme Download Manager 8.0.29, set up to run on Windows RT 8.0 and 8.1 and Windows 10 ARM32. It downloads over HTTP and HTTPS in many parts at once, and it can resume. Video download doesn't work, because yt-dlp and ffmpeg are x86 programs and can't run on ARM32. This is my unofficial fork of subhra74/xdm. I didn't change any source code, only the icon. It needs .NET Framework 4.5 or newer and WPF. Windows RT has no WPF, so you have to install an ARM32 WPF build once with wpf-prerequisite\\wpf-setup.cmd (it's in the package) before XDM will start.",
   "dateOriginal": "2026-08-03",
   "dateSource": "2026-08-03",
   "size": "3023259",
   "dependencies": [
-    ".NET Framework 4.5 or later — on Windows RT 8.1 install the RT-specific package https://go.microsoft.com/fwlink/?linkid=2088632, which appears afterwards as KB4486105",
-    "KB2919355, the Windows RT 8.1 Update — required before that .NET package will install",
-    "WPF for ARM32 — not bundled and not redistributable here; obtain the XDA ARM32 WPF port and install it once with the included wpf-prerequisite\\wpf-setup.cmd",
-    "Windows test-signing mode enabled on the device — the packages are unsigned desktop applications"
+    ".NET Framework 4.5 or newer. On Windows RT 8.1 install the RT package from https://go.microsoft.com/fwlink/?linkid=2088632 (it shows up as KB4486105).",
+    "KB2919355, the Windows RT 8.1 Update. The .NET package won't install without it.",
+    "WPF for ARM32. It's not in the package and I can't share it. Get the ARM32 WPF port from XDA and install it once with wpf-prerequisite\\wpf-setup.cmd.",
+    "Windows test-signing mode on the device, because the files are not signed."
   ],
   "instructionSteps": [
-    "Install KB2919355, the Windows RT 8.1 Update, if it is not already present.",
-    "Install the .NET Framework package for Windows RT from https://go.microsoft.com/fwlink/?linkid=2088632 and reboot when it asks.",
-    "Put the device into Windows' test-signing mode so unsigned desktop applications can run.",
-    "Extract XDM-8.0.29-rt1-Setup-AnyCPU.zip, keeping Setup.exe and payload.zip together.",
-    "Download the ARM32 WPF port archive from https://xdaforums.com/t/wpf-for-windows-rt-devices.3763345/ and extract it next to wpf-prerequisite\\wpf-setup.cmd.",
-    "Run wpf-prerequisite\\wpf-setup.cmd /verify to see what is missing; it changes nothing and needs no administrator.",
+    "Install KB2919355 (the Windows RT 8.1 Update) if you don't have it.",
+    "Install the .NET Framework package for Windows RT from https://go.microsoft.com/fwlink/?linkid=2088632, and reboot when it asks.",
+    "Put the device in test-signing mode, so unsigned desktop apps can run.",
+    "Extract XDM-8.0.29-rt1-Setup-AnyCPU.zip. Keep Setup.exe and payload.zip together.",
+    "Download the ARM32 WPF port from https://xdaforums.com/t/wpf-for-windows-rt-devices.3763345/ and extract it next to wpf-prerequisite\\wpf-setup.cmd.",
+    "Run wpf-prerequisite\\wpf-setup.cmd /verify to see what's missing. It doesn't change anything and doesn't need admin.",
     "Run wpf-prerequisite\\wpf-setup.cmd as Administrator to install WPF.",
-    "Run Setup.exe --check to confirm everything is in place; it changes nothing.",
-    "Run Setup.exe to install XDM per user, then start XDM from the Start menu."
+    "Run Setup.exe --check to see if everything is in place. It doesn't change anything.",
+    "Run Setup.exe to install XDM for your user, then start XDM from the Start menu."
   ],
   "isImmersive": false,
   "links": [

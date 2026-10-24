@@ -6,21 +6,21 @@
   "uploader": "hamed7ir",
   "source": "hamed7ir",
   "category": "Utilities",
-  "description": "DroidFinestra is a Windows GUI for scrcpy that mirrors and controls an Android phone over USB or Wi-Fi. It keeps per-device profiles, builds the scrcpy command line from the chosen profile, pairs phones over Wi-Fi and shows scrcpy's live output. This package carries the official scrcpy release with Google's adb and runs on 64-bit Windows 10 and 11; it needs the .NET Framework 4.0 and, for its adb, the Universal C Runtime, which both include. DroidFinestra launches scrcpy without modifying it; scrcpy is by Genymobile.",
+  "description": "DroidFinestra lets you use your Android phone from Windows. It's a GUI for scrcpy, so you can see and control the phone over USB or Wi-Fi. You keep a profile for each phone, it builds the scrcpy command for you, pairs phones over Wi-Fi and shows scrcpy's output. This package has the official scrcpy release with Google's adb, and it runs on 64-bit Windows 10 and 11. It needs .NET Framework 4.0 and, for adb, the Universal C Runtime. Windows 10 and 11 already have both. DroidFinestra starts scrcpy but doesn't change it. scrcpy is made by Genymobile.",
   "dateOriginal": "2026-09-25",
   "dateSource": "2026-09-25",
   "size": "13013504",
   "dependencies": [
-    ".NET Framework 4.0 or later — built into Windows 10 and 11",
-    "Universal C Runtime — built into Windows 10 and 11; needed by the bundled adb",
-    "USB debugging enabled on the Android phone"
+    ".NET Framework 4.0 or newer. Windows 10 and 11 already have it.",
+    "The Universal C Runtime, for the adb inside. Windows 10 and 11 already have it.",
+    "USB debugging turned on, on the Android phone."
   ],
   "instructionSteps": [
-    "Run the installer. It installs per user into %LocalAppData%\\Programs\\DroidFinestra and needs no administrator rights; it checks the requirements first and reports anything missing.",
-    "At the SmartScreen warning choose More info, then Run anyway — the files are not signed.",
-    "On the phone, enable USB debugging (Developer options), then connect it by USB and accept the USB-debugging prompt on the phone.",
-    "In DroidFinestra choose New profile, start from a preset, and press Launch. DroidFinestra shows the scrcpy command line, then scrcpy's live output.",
-    "For Wi-Fi: on the phone open Wireless debugging and choose Pair device with pairing code; in DroidFinestra open the menu, choose Pair a phone over Wi-Fi, and enter the pairing address and code, then the connect address. Addresses are typed, not discovered."
+    "Run the installer. It installs for your user only into %LocalAppData%\\Programs\\DroidFinestra and doesn't need admin. It checks the requirements first and tells you if something is missing.",
+    "The files are not signed, so SmartScreen warns the first time. Click More info, then Run anyway.",
+    "On the phone, turn on USB debugging (in Developer options), connect it by USB and accept the USB debugging prompt on the phone.",
+    "In DroidFinestra choose New profile, start from a preset and press Launch. You see the scrcpy command line first, then scrcpy's live output.",
+    "For Wi-Fi: on the phone open Wireless debugging and choose Pair device with pairing code. In DroidFinestra open the menu, choose Pair a phone over Wi-Fi, and type the pairing address and code, then the connect address. You type the addresses, they are not found automatically."
   ],
   "isImmersive": false,
   "links": [
