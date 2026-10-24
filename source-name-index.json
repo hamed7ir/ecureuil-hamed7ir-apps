@@ -2,42 +2,39 @@
   {
     "id": "csray",
     "name": "CS-Ray",
-    "version": "1.1.0",
+    "version": "2.0.0",
     "author": "hamed7ir",
     "uploader": "hamed7ir",
     "source": "hamed7ir",
     "category": "Utilities",
-    "description": "CS-Ray is a proxy client written entirely in managed C# (.NET Framework 4.7, WinForms) with a hand-written userspace TUN TCP/IP netstack, so that a VLESS/VMess/Shadowsocks client can run on legacy ARM32 Windows, where the native proxy cores have no builds. It handles VLESS, VMess (AEAD), Shadowsocks (AEAD), SOCKS5 and HTTP(S) outbounds over raw TCP, TLS 1.2, WebSocket-over-TLS and XHTTP, exposes a mixed SOCKS5+HTTP inbound on 127.0.0.1:10810, and provides system-proxy and full-tunnel (Wintun) modes. The same AnyCPU build runs on ARM32 Windows RT 8.0 and 8.1 and Windows 10 ARM32, and on x86 and x64 Windows 7 and later; on Windows 7 only system-proxy mode works, because the bundled Wintun driver needs Windows 8, and RT 8.0 needs the .NET Framework 4.8 update. REALITY, uTLS, XTLS, ECH and QUIC-based transports are not supported because of the managed-TLS ceiling. The project describes itself as alpha software.",
-    "dateOriginal": "2026-07-08",
-    "dateSource": "2026-07-08",
-    "size": "6649189",
+    "description": "CS-Ray is a proxy client for Windows that I wrote fully in C#. There is no xray.exe or sing-box inside it. The protocols, the TLS and the TUN network stack are all managed .NET code, so it runs on old ARM32 Windows where v2rayN and the other clients can't. It supports VLESS over TCP, WebSocket and XHTTP with TLS or REALITY and XTLS Vision, VMess (AEAD), Shadowsocks (AEAD), and SOCKS5 or HTTP(S) servers. You get a local proxy on 127.0.0.1:10810 with two modes on top: system proxy, or a full tunnel (Wintun) that takes all the traffic of the PC. Links it can't run yet (Trojan, Hysteria, TUIC, gRPC) still get imported, greyed out with the reason. One build runs on Windows RT 8.0 and 8.1, Windows 10 ARM32, and x86 and x64 Windows 7 and newer. On Windows 7 only system proxy mode works, because the Wintun driver needs Windows 8. RT 8.0 needs the .NET 4.8 update.",
+    "dateOriginal": "2026-10-13",
+    "dateSource": "2026-10-13",
+    "size": "5053952",
     "dependencies": [
-      ".NET Framework 4.7",
-      "Windows RT 8.0 only: the .NET Framework 4.8 update must be installed before the app will start. It is currently difficult to obtain for RT 8.0."
+      ".NET Framework 4.7 or newer",
+      "Windows RT 8.0 only: the .NET Framework 4.8 update. It's hard to find for RT 8.0 right now."
     ],
     "instructionSteps": [
-      "On Windows RT 8.1, jailbreak the device first — RT only runs unsigned desktop apps after the jailbreak.",
-      "Make sure .NET Framework 4.7 is installed on the device.",
-      "On Windows RT 8.0, install the .NET Framework 4.8 update first — the app will not start without it, and it is currently difficult to obtain for that version.",
-      "Extract CS-Ray-1.1.0-Setup-AnyCPU.zip.",
-      "Run Setup.exe — it installs per user and does not need administrator rights.",
-      "If SmartScreen warns about an unknown publisher, choose More info, then Run anyway; the build is unsigned.",
-      "Start CS-Ray and add a server with a vless://, vmess://, ss://, socks:// or http(s):// link, or add a subscription URL in Settings.",
-      "Select a server in the list and press Start Engine; the local SOCKS5+HTTP inbound listens on 127.0.0.1:10810.",
-      "Turn on System proxy for browsers and WinINET apps — no elevation is needed.",
-      "Turn on Full tunnel (TUN) only if you want whole-device capture, and approve the administrator prompt it raises.",
-      "On Windows 7, use System proxy mode — Full tunnel (TUN) needs Windows 8 or later, because the bundled Wintun driver does."
+      "On Windows RT, jailbreak the device first. RT only runs unsigned desktop apps after a jailbreak.",
+      "You need .NET Framework 4.7 or newer. Windows 10 and 11 already have it. If you're not sure, the installer has a Check requirements button.",
+      "On Windows RT 8.0 install the .NET Framework 4.8 update first. The app won't start without it, and it's hard to find for RT 8.0 right now.",
+      "Run CS-Ray-Setup-2.0.0.exe. It installs only for your user (to %LocalAppData%\\Programs\\CS-Ray) and doesn't need admin.",
+      "Add a server from a link or add a subscription, pick a server and start it. The local SOCKS5 and HTTP proxy is on 127.0.0.1:10810.",
+      "System proxy mode never needs admin. Full tunnel asks for admin (UAC) because it makes a Wintun network adapter. When you're done, close CS-Ray from the tray icon (Exit) so it can remove the adapter and the routes.",
+      "On Windows 7 use system proxy mode. Full tunnel needs Windows 8 or newer, because the Wintun driver does."
     ],
     "isImmersive": false,
     "links": [
       "https://github.com/hamed7ir/CS-Ray",
-      "https://github.com/hamed7ir/CS-Ray/releases/tag/v1.1.0",
-      "https://www.wintun.net/"
+      "https://github.com/hamed7ir/CS-Ray/releases/tag/v2.0.0",
+      "https://www.wintun.net/",
+      "https://github.com/XTLS/Xray-core"
     ],
     "architecture": "neutral",
     "installParameters": [],
-    "DownloadPath": "Setup.exe",
-    "fileType": "zip",
+    "DownloadPath": "CS-Ray-Setup-2.0.0.exe",
+    "fileType": "exe",
     "uninstallParameters": [],
     "isPortable": false,
     "compatibility": [
@@ -48,10 +45,8 @@
       "11"
     ],
     "iconUrl": "https://raw.githubusercontent.com/hamed7ir/CS-Ray/refs/heads/main/CS-Ray/icon/icon.ico",
-    "screenshots": [
-      "https://github.com/user-attachments/assets/97aee84b-15c2-4f84-b416-50152570de62"
-    ],
-    "downloadUrl": "https://github.com/hamed7ir/CS-Ray/releases/download/v1.1.0/CS-Ray-1.1.0-Setup-AnyCPU.zip",
+    "screenshots": [],
+    "downloadUrl": "https://github.com/hamed7ir/CS-Ray/releases/download/v2.0.0/CS-Ray-Setup-2.0.0.exe",
     "language": [
       "en-US"
     ],
@@ -65,21 +60,21 @@
     "uploader": "hamed7ir",
     "source": "hamed7ir",
     "category": "Utilities",
-    "description": "DroidFinestra is a Windows GUI for scrcpy that mirrors and controls an Android phone over USB or Wi-Fi. It keeps per-device profiles, builds the scrcpy command line from the chosen profile, pairs phones over Wi-Fi and shows scrcpy's live output. This package carries the official scrcpy release with Google's adb and runs on 64-bit Windows 10 and 11; it needs the .NET Framework 4.0 and, for its adb, the Universal C Runtime, which both include. DroidFinestra launches scrcpy without modifying it; scrcpy is by Genymobile.",
+    "description": "DroidFinestra lets you use your Android phone from Windows. It's a GUI for scrcpy, so you can see and control the phone over USB or Wi-Fi. You keep a profile for each phone, it builds the scrcpy command for you, pairs phones over Wi-Fi and shows scrcpy's output. This package has the official scrcpy release with Google's adb, and it runs on 64-bit Windows 10 and 11. It needs .NET Framework 4.0 and, for adb, the Universal C Runtime. Windows 10 and 11 already have both. DroidFinestra starts scrcpy but doesn't change it. scrcpy is made by Genymobile.",
     "dateOriginal": "2026-09-25",
     "dateSource": "2026-09-25",
     "size": "13013504",
     "dependencies": [
-      ".NET Framework 4.0 or later — built into Windows 10 and 11",
-      "Universal C Runtime — built into Windows 10 and 11; needed by the bundled adb",
-      "USB debugging enabled on the Android phone"
+      ".NET Framework 4.0 or newer. Windows 10 and 11 already have it.",
+      "The Universal C Runtime, for the adb inside. Windows 10 and 11 already have it.",
+      "USB debugging turned on, on the Android phone."
     ],
     "instructionSteps": [
-      "Run the installer. It installs per user into %LocalAppData%\\Programs\\DroidFinestra and needs no administrator rights; it checks the requirements first and reports anything missing.",
-      "At the SmartScreen warning choose More info, then Run anyway — the files are not signed.",
-      "On the phone, enable USB debugging (Developer options), then connect it by USB and accept the USB-debugging prompt on the phone.",
-      "In DroidFinestra choose New profile, start from a preset, and press Launch. DroidFinestra shows the scrcpy command line, then scrcpy's live output.",
-      "For Wi-Fi: on the phone open Wireless debugging and choose Pair device with pairing code; in DroidFinestra open the menu, choose Pair a phone over Wi-Fi, and enter the pairing address and code, then the connect address. Addresses are typed, not discovered."
+      "Run the installer. It installs for your user only into %LocalAppData%\\Programs\\DroidFinestra and doesn't need admin. It checks the requirements first and tells you if something is missing.",
+      "The files are not signed, so SmartScreen warns the first time. Click More info, then Run anyway.",
+      "On the phone, turn on USB debugging (in Developer options), connect it by USB and accept the USB debugging prompt on the phone.",
+      "In DroidFinestra choose New profile, start from a preset and press Launch. You see the scrcpy command line first, then scrcpy's live output.",
+      "For Wi-Fi: on the phone open Wireless debugging and choose Pair device with pairing code. In DroidFinestra open the menu, choose Pair a phone over Wi-Fi, and type the pairing address and code, then the connect address. You type the addresses, they are not found automatically."
     ],
     "isImmersive": false,
     "links": [
@@ -119,22 +114,22 @@
     "uploader": "hamed7ir",
     "source": "hamed7ir",
     "category": "Utilities",
-    "description": "DroidFinestra is a Windows GUI for scrcpy that mirrors and controls an Android phone over USB or Wi-Fi. It keeps per-device profiles with presets such as \"Surface RT — balanced\", builds the scrcpy command line from the chosen profile, pairs phones over Wi-Fi and shows scrcpy's live output. This package carries scrcpy, adb and FFmpeg built for 32-bit ARM Windows (scrcpy-rt, adb-rt, ffmpeg-rt) and runs on Windows RT 8.0 and 8.1 and Windows 10 ARM32, needing only the .NET Framework 4.0 that Windows RT already includes. DroidFinestra launches scrcpy without modifying it; scrcpy is by Genymobile.",
+    "description": "DroidFinestra lets you use your Android phone from Windows. It's a GUI for scrcpy, so you can see and control the phone over USB or Wi-Fi. You keep a profile for each phone (there are ready presets for the Surface RT), it builds the scrcpy command for you, pairs phones over Wi-Fi and shows scrcpy's output. This package has scrcpy, adb and FFmpeg built for 32-bit ARM Windows (scrcpy-rt, adb-rt, ffmpeg-rt), and it runs on Windows RT 8.0 and 8.1 and Windows 10 ARM32. It only needs .NET Framework 4.0, which Windows RT already has. DroidFinestra starts scrcpy but doesn't change it. scrcpy is made by Genymobile.",
     "dateOriginal": "2026-09-25",
     "dateSource": "2026-09-25",
     "size": "9047040",
     "dependencies": [
-      ".NET Framework 4.0 or later — built into Windows 8 and Windows RT",
-      "USB debugging enabled on the Android phone"
+      ".NET Framework 4.0 or newer. Windows 8 and Windows RT already have it.",
+      "USB debugging turned on, on the Android phone."
     ],
     "instructionSteps": [
-      "On Windows RT, jailbreak the device first — RT only runs unsigned desktop apps after the jailbreak.",
-      "Run the installer. It installs per user into %LocalAppData%\\Programs\\DroidFinestra and needs no administrator rights; it checks the requirements first and reports anything missing.",
-      "At the SmartScreen warning choose More info, then Run anyway — the files are not signed.",
-      "On the phone, enable USB debugging (Developer options), then connect it by USB and accept the USB-debugging prompt on the phone.",
-      "In DroidFinestra choose New profile, start from a preset, and press Launch. DroidFinestra shows the scrcpy command line, then scrcpy's live output.",
-      "For Wi-Fi: on the phone open Wireless debugging and choose Pair device with pairing code; in DroidFinestra open the menu, choose Pair a phone over Wi-Fi, and enter the pairing address and code, then the connect address. Addresses are typed, not discovered.",
-      "Keep --render-driver=direct3d on (every preset has it): without it the scrcpy window is black on Tegra 3 hardware such as the Surface RT."
+      "On Windows RT, jailbreak the device first. RT only runs unsigned desktop apps after a jailbreak.",
+      "Run the installer. It installs for your user only into %LocalAppData%\\Programs\\DroidFinestra and doesn't need admin. It checks the requirements first and tells you if something is missing.",
+      "The files are not signed, so SmartScreen warns the first time. Click More info, then Run anyway.",
+      "On the phone, turn on USB debugging (in Developer options), connect it by USB and accept the USB debugging prompt on the phone.",
+      "In DroidFinestra choose New profile, start from a preset and press Launch. You see the scrcpy command line first, then scrcpy's live output.",
+      "For Wi-Fi: on the phone open Wireless debugging and choose Pair device with pairing code. In DroidFinestra open the menu, choose Pair a phone over Wi-Fi, and type the pairing address and code, then the connect address. You type the addresses, they are not found automatically.",
+      "Keep --render-driver=direct3d on. Every preset has it, and without it the scrcpy window is black on Tegra 3 tablets like the Surface RT."
     ],
     "isImmersive": false,
     "links": [
@@ -170,44 +165,42 @@
   {
     "id": "finestra",
     "name": "Finestra",
-    "version": "1.0.3",
+    "version": "2.0.0",
     "author": "hamed7ir",
     "uploader": "hamed7ir",
     "source": "hamed7ir",
     "category": "Utilities",
-    "description": "Finestra is a remote connection manager that runs RDP, SSH and SFTP/FTP/FTPS sessions as tabs in a single window, with a dual-pane file browser for the transfer protocols and an xterm-256color terminal for SSH. One AnyCPU build runs on ARM32 Windows RT 8.0 and 8.1 and Windows 10 ARM32, and on x86 and x64 Windows 7 SP1 through 11; it requires .NET Framework 4.7 or later, and on RT 8.0 the .NET Framework 4.8 update, which is currently difficult to obtain there. Its RDP engine is a modified FreeRDP 3.28.0 bundled for ARM32 and x64; on 32-bit x86 Windows RDP needs a separately supplied engine, while SSH and file transfer work without it. The binaries are unsigned, and Windows RT needs a jailbroken device.",
-    "dateOriginal": "2026-08-08",
-    "dateSource": "2026-08-08",
-    "size": "10353908",
+    "description": "Finestra is a remote connection manager: RDP, SSH, SFTP, FTP and FTPS in one app, with tabs. I made it mainly for Windows RT, because there is no good modern remote desktop client for it. For RDP it uses FreeRDP 3.32.2 (the SDL3 client) with my changes, built for ARM32 and x64. On a touch screen there is a Touch / Mouse switch, so swipe and pinch go to the remote PC. One build runs on Windows RT 8.0 and 8.1, Windows 10 ARM32, and x86 and x64 Windows 10 and 11. You need .NET Framework 4.7 or newer, and on RT 8.0 that means the .NET 4.8 update, which is hard to find right now. On 32-bit x86 Windows you have to add the RDP engine yourself, SSH and FTP work without it. The files are not signed, and Windows RT has to be jailbroken.",
+    "dateOriginal": "2026-10-23",
+    "dateSource": "2026-10-23",
+    "size": "14972928",
     "dependencies": [
-      ".NET Framework 4.7 or later",
-      "Windows RT 8.0 only: the .NET Framework 4.8 update must be installed before the app will start. It is currently difficult to obtain for RT 8.0."
+      ".NET Framework 4.7 or newer",
+      "Windows RT 8.0 only: the .NET Framework 4.8 update. It's hard to find for RT 8.0 right now."
     ],
     "instructionSteps": [
-      "Install .NET Framework 4.7 or later if the device does not already have it.",
-      "On Windows RT 8.0, install the .NET Framework 4.8 update first — the app will not start without it, and it is currently difficult to obtain for that version.",
-      "On Windows RT 8.1, jailbreak the device first — RT only runs unsigned desktop apps after the jailbreak.",
-      "Extract Finestra-Setup-1.0.3.zip to any folder.",
-      "Keep Setup.exe and payload.zip together in that folder — Setup.exe reads payload.zip from beside itself.",
-      "Run Setup.exe. It installs per user into %LocalAppData%\\Programs\\Finestra and needs no administrator rights.",
-      "At the SmartScreen warning choose More info, then Run anyway — the binaries are unsigned.",
-      "Start Finestra from its Start-menu shortcut.",
-      "On 32-bit x86 Windows only, drop a 32-bit wfreerdp.exe into engine\\x86\\ to enable RDP."
+      "Install .NET Framework 4.7 or newer if you don't have it. Windows 10 1703 and later already have it.",
+      "On Windows RT 8.0 install the .NET Framework 4.8 update first. The app won't start without it, and it's hard to find for RT 8.0 right now.",
+      "On Windows RT, jailbreak the device first. RT only runs unsigned desktop apps after a jailbreak.",
+      "Run Finestra-Setup-2.0.0.exe. It installs for your user only into %LocalAppData%\\Programs\\Finestra, with no admin needed. You get a Start menu shortcut and an uninstall entry.",
+      "The files are not signed, so SmartScreen warns the first time. Click More info, then Run anyway.",
+      "Upgrading from 1.0.3: install into the same folder and your connections and settings are kept. If you set your own engine path in Settings > RDP engine, clear it, or you keep the old engine.",
+      "On a touch screen RDP starts in Touch mode. You can change it with the switch on the tab bar or in Settings > Session.",
+      "On 32-bit x86 Windows you have to add the RDP engine yourself. Read README.txt in engine\\x86. SSH and FTP work without it."
     ],
     "isImmersive": false,
     "links": [
       "https://github.com/hamed7ir/Finestra",
-      "https://github.com/hamed7ir/Finestra/releases",
-      "https://github.com/hamed7ir/FreeRDP"
+      "https://github.com/hamed7ir/Finestra/releases/tag/v2.0.0",
+      "https://github.com/hamed7ir/FreeRDP/tree/finestra-arm32-rt-3.32"
     ],
     "architecture": "neutral",
     "installParameters": [],
-    "DownloadPath": "Setup.exe",
-    "fileType": "zip",
+    "DownloadPath": "Finestra-Setup-2.0.0.exe",
+    "fileType": "exe",
     "uninstallParameters": [],
     "isPortable": false,
     "compatibility": [
-      "7",
       "8.0",
       "8.1",
       "10",
@@ -220,7 +213,7 @@
       "https://raw.githubusercontent.com/hamed7ir/Finestra/refs/heads/main/docs/session-tabs2.jpg",
       "https://raw.githubusercontent.com/hamed7ir/Finestra/refs/heads/main/docs/about.png"
     ],
-    "downloadUrl": "https://github.com/hamed7ir/Finestra/releases/download/v1.0.3/Finestra-Setup-1.0.3.zip",
+    "downloadUrl": "https://github.com/hamed7ir/Finestra/releases/download/v2.0.0/Finestra-Setup-2.0.0.exe",
     "language": [
       "en-US"
     ],
@@ -234,20 +227,20 @@
     "uploader": "hamed7ir",
     "source": "hamed7ir",
     "category": "Development",
-    "description": "Lite XL is a text editor written mostly in Lua, derived from rxi's lite. This is an unofficial 32-bit ARM Windows build of Lite XL 2.1.8, a target upstream does not ship; it was measured running on Windows RT 8.0, Windows RT 8.1 and Windows 10 ARM32. The editor links the C runtime statically and needs no runtime installed. The installer in this package is MSIL/AnyCPU and needs .NET Framework 4.0, which is in-box on Windows RT; it installs per user and asks for no administrator rights.",
+    "description": "Lite XL is a text editor written mostly in Lua, made from rxi's lite. Upstream doesn't make a 32-bit ARM Windows build, so this is my unofficial build of Lite XL 2.1.8. I tested it on Windows RT 8.0, Windows RT 8.1 and Windows 10 ARM32. The C runtime is built in, so the editor needs nothing else installed. The installer in this package needs .NET Framework 4.0, which Windows RT already has. It installs for your user only and doesn't ask for admin.",
     "dateOriginal": "2026-09-11",
     "dateSource": "2026-09-11",
     "size": "1934521",
     "dependencies": [
-      ".NET Framework 4.0 — for the installer only; present on Windows RT out of the box. The editor itself needs no runtime."
+      ".NET Framework 4.0, only for the installer. Windows RT already has it. The editor itself needs nothing."
     ],
     "instructionSteps": [
-      "Extract lite-xl-2.1.8-arm32-windows-setup.zip anywhere. It unpacks into a folder named lite-xl-2.1.8-arm32-windows-setup.",
-      "Open that folder and run LiteXLSetup.exe. Windows warns about an unknown publisher because the build is not code-signed.",
-      "Pick an install folder, or take the default %LOCALAPPDATA%\\Programs\\Lite XL.",
+      "Extract lite-xl-2.1.8-arm32-windows-setup.zip anywhere. You get a folder named lite-xl-2.1.8-arm32-windows-setup.",
+      "Open that folder and run LiteXLSetup.exe. The installer isn't signed, so Windows warns about an unknown publisher.",
+      "Pick an install folder, or keep the default %LOCALAPPDATA%\\Programs\\Lite XL.",
       "Tick the Start menu shortcut, Desktop shortcut and right-click entry you want, then press Install.",
-      "It installs per user and needs no administrator rights.",
-      "To remove it later, use Settings > Apps, or run LiteXLUninstall.exe from the install folder."
+      "It installs for your user only and doesn't need admin.",
+      "To remove it later, use Settings > Apps, or run LiteXLUninstall.exe in the install folder."
     ],
     "isImmersive": false,
     "links": [
@@ -281,41 +274,41 @@
   {
     "id": "telegarm",
     "name": "TelegArm",
-    "version": "1.9.0",
+    "version": "2.0.0",
     "author": "hamed7ir",
     "uploader": "hamed7ir",
     "source": "hamed7ir",
     "category": "Utilities",
-    "description": "TelegArm is a Telegram client for Windows written entirely in managed C#. It speaks MTProto directly through the WTelegramClient library with no native Telegram component, and one AnyCPU + Prefer32Bit build runs on ARM32 Windows RT 8.0 and 8.1 and Windows 10 ARM32, on x86 and x64 Windows 7 SP1 through 11, and on ARM64 Windows 10 and 11. It requires .NET Framework 4.7 or later: Windows RT 8.1 ships only 4.5, so the runtime must be installed first — on ARM32 from the Open-RT redistributables mirror, because Microsoft's web installer serves no ARM32 build — and RT 8.0 needs the .NET Framework 4.8 update, which is currently difficult to obtain there.",
-    "dateOriginal": "2026-08-08",
-    "dateSource": "2026-08-08",
-    "size": "129129148",
+    "description": "TelegArm is a Telegram client for Windows RT and Windows 10 ARM32. The official Telegram apps don't run on these devices anymore, so I made this one. It runs on normal Windows PCs too. It's written in C# and talks to Telegram with WTelegramClient. Voice calls, video calls and group voice chats use Telegram's own call library (tgcalls), and videos and music play with FFmpeg. One build runs on Windows RT 8.0 and 8.1, Windows 10 ARM32, and Windows 8.1, 10 and 11 (x86, x64 and ARM64). Calls need Windows 8.1 or newer. Windows 7 is not tested yet, and calls don't work there. You need .NET Framework 4.7 or newer. Windows RT 8.1 comes with 4.5, so install 4.7 first, and RT 8.0 needs the .NET 4.8 update, which is hard to find.",
+    "dateOriginal": "2026-10-16",
+    "dateSource": "2026-10-16",
+    "size": "45235712",
     "dependencies": [
-      "Microsoft .NET Framework 4.7 or later",
-      "Windows RT 8.0 only: the .NET Framework 4.8 update must be installed before the app will start. It is currently difficult to obtain for RT 8.0."
+      ".NET Framework 4.7 or newer",
+      "Windows RT 8.0 only: the .NET Framework 4.8 update. It's hard to find for RT 8.0 right now.",
+      "Windows 8.1 or newer for voice and video calls"
     ],
     "instructionSteps": [
-      "On Windows RT 8.1, jailbreak the device first — RT only runs unsigned desktop apps after the jailbreak.",
-      "On Windows RT 8.1, install .NET Framework 4.7 from https://files.open-rt.party/Software/Redistributables/ — Microsoft's own web installer serves no ARM32 build.",
-      "On Windows 10 ARM32 .NET 4.7 is already present; no action is needed.",
-      "On Windows RT 8.0, install the .NET Framework 4.8 update first — the app will not start without it, and it is currently difficult to obtain for that version.",
-      "Copy TelegArm-1.9.0-Setup-AnyCPU.zip to the device and extract it.",
-      "Keep Setup.exe and payload.zip together in the same folder — Setup reads the payload from beside itself.",
-      "Run Setup.exe, and press Check requirements first if you are unsure whether .NET 4.7 is present.",
-      "Let it install per user into %LocalAppData%\\Programs\\TelegArm; no administrator rights are needed.",
-      "On Windows 7, also install the Microsoft Visual C++ 2015 or later redistributable (x86) — TelegArm runs without it, but animated stickers stay still."
+      "On Windows RT, jailbreak the device first. RT only runs unsigned desktop apps after a jailbreak.",
+      "Install .NET Framework 4.7 or newer first. On Windows RT 8.1 get it here: https://go.microsoft.com/fwlink/?linkid=2088632. Windows 10 ARM32 already has it.",
+      "On Windows RT 8.0 install the .NET Framework 4.8 update first. The app won't start without it, and it's hard to find for RT 8.0 right now.",
+      "Run TelegArm-2.0.0-Setup.exe. It checks .NET for you and gives you the link if it's missing.",
+      "Voice and video calls need Windows 8.1 or newer.",
+      "On Windows 7 also install the Microsoft Visual C++ 2015 or newer redistributable (x86). TelegArm works without it, but animated stickers won't move.",
+      "Upgrading from 1.9: your accounts and settings carry over."
     ],
     "isImmersive": false,
     "links": [
       "https://github.com/hamed7ir/TelegArm",
-      "https://github.com/hamed7ir/TelegArm/releases/tag/v1.9.0",
+      "https://github.com/hamed7ir/TelegArm/releases/tag/v2.0.0",
       "https://github.com/wiz0u/WTelegramClient",
-      "https://files.open-rt.party/Software/Redistributables/"
+      "https://github.com/TelegramMessenger/tgcalls",
+      "https://go.microsoft.com/fwlink/?linkid=2088632"
     ],
     "architecture": "neutral",
     "installParameters": [],
-    "DownloadPath": "Setup.exe",
-    "fileType": "zip",
+    "DownloadPath": "TelegArm-2.0.0-Setup.exe",
+    "fileType": "exe",
     "uninstallParameters": [],
     "isPortable": false,
     "compatibility": [
@@ -327,9 +320,10 @@
     ],
     "iconUrl": "https://raw.githubusercontent.com/hamed7ir/TelegArm/refs/heads/main/img-icon/TelegArm.png",
     "screenshots": [
-      "https://github.com/user-attachments/assets/abbcc303-0894-43a4-b826-63c3cc1695cf"
+      "https://github.com/user-attachments/assets/13e1cb64-64ef-45fb-88b3-8e3fc08cbcf4",
+      "https://raw.githubusercontent.com/hamed7ir/TelegArm/refs/heads/main/media/teaser.gif"
     ],
-    "downloadUrl": "https://github.com/hamed7ir/TelegArm/releases/download/v1.9.0/TelegArm-1.9.0-Setup-AnyCPU.zip",
+    "downloadUrl": "https://github.com/hamed7ir/TelegArm/releases/download/v2.0.0/TelegArm-2.0.0-Setup.exe",
     "language": [
       "en-US"
     ],
@@ -343,23 +337,23 @@
     "uploader": "hamed7ir",
     "source": "hamed7ir",
     "category": "Utilities",
-    "description": "Varan is a fork of the Pale Moon web browser built for 32-bit ARM Windows RT devices such as the Surface RT and Surface 2 (Tegra 3 / Cortex-A9), a target upstream does not build for. It runs on Windows RT 8.0 and 8.1 and on Windows 10 ARM32. Release 1.1 is based on Pale Moon 35.0.0 with the UXP RB_20260914 platform, and adds ARM NEON support to libvpx plus ARM assembly for ffvpx so 720p and 1080p playback works. The device must be put in test-signing mode first, because Windows RT will not load unsigned ARM binaries under its default policy, and it needs the Microsoft Visual C++ 2015 or later redistributable for ARM32. It is not endorsed by or affiliated with Moonchild Productions, and bugs belong in this repository rather than with the Pale Moon project.",
+    "description": "Varan is Pale Moon built for 32-bit ARM Windows, for tablets like the Surface RT and Surface 2. Pale Moon doesn't make ARM32 builds, so I made this fork. It runs on Windows RT 8.0 and 8.1 and Windows 10 ARM32. Version 1.1 is based on Pale Moon 35.0.0 (UXP RB_20260914), with ARM NEON for libvpx and ARM code for ffvpx, so 720p and 1080p video plays. Your device has to be in test-signing mode, because Windows RT won't load unsigned ARM programs otherwise. You also need the Microsoft Visual C++ 2015 or newer redistributable for ARM32. Varan is not made or supported by Moonchild Productions, so please report bugs to me, not to the Pale Moon project.",
     "dateOriginal": "2026-09-16",
     "dateSource": "2026-09-16",
     "size": "43581245",
     "dependencies": [
-      "Windows RT device placed in test-signing mode — required to run the unsigned ARM binaries",
-      "Microsoft Visual C++ 2015 or later redistributable for ARM32 — varan.exe imports VCRUNTIME140.dll and the api-ms-win-crt-* Universal CRT stubs, and no CRT is bundled in the package.",
-      "vorapis v3 extension (https://vorapis.pages.dev/#/home/download) — third party, needed only for YouTube; not bundled in this package"
+      "Windows test-signing mode on the device, so the unsigned ARM programs can run.",
+      "Microsoft Visual C++ 2015 or newer redistributable for ARM32. varan.exe needs VCRUNTIME140.dll and the Universal CRT, and they are not in the package.",
+      "The vorapis v3 extension (https://vorapis.pages.dev/#/home/download), only for YouTube. It's third party and not in the package."
     ],
     "instructionSteps": [
       "Put the device in test-signing mode.",
-      "Install the Microsoft Visual C++ 2015 or later redistributable for ARM32 if it is not already present — varan.exe needs VCRUNTIME140.dll and the Universal CRT.",
-      "Extract Varan-35.0.0-arm32-Setup.zip. It unpacks into a folder named Varan-Setup holding Setup.exe and payload.zip.",
-      "Keep Setup.exe and payload.zip together in that folder, then run Setup.exe to perform the per-user install; it preserves the profile on removal.",
-      "Launch Varan from its shortcut.",
-      "For YouTube, install the vorapis v3 extension from https://vorapis.pages.dev/#/home/download — it is third party and not bundled.",
-      "(Recommended) Remove the old profile from %APPDATA% (C:\\Users\\<you>\\AppData\\Roaming) and start fresh."
+      "Install the Microsoft Visual C++ 2015 or newer redistributable for ARM32 if you don't have it. varan.exe needs VCRUNTIME140.dll and the Universal CRT.",
+      "Extract Varan-35.0.0-arm32-Setup.zip. You get a folder named Varan-Setup with Setup.exe and payload.zip in it.",
+      "Keep Setup.exe and payload.zip together and run Setup.exe. It installs for your user only, and uninstalling keeps your profile.",
+      "Start Varan from its shortcut.",
+      "For YouTube, install the vorapis v3 extension from https://vorapis.pages.dev/#/home/download. It's third party and not in the package.",
+      "It's a good idea to remove the old profile from %APPDATA% (C:\\Users\\<you>\\AppData\\Roaming) and start fresh."
     ],
     "isImmersive": false,
     "links": [
@@ -391,6 +385,207 @@
     "isTrial": false
   },
   {
+    "id": "venetium-x86",
+    "name": "Venetium (x86)",
+    "version": "1.2",
+    "author": "hamed7ir",
+    "uploader": "hamed7ir",
+    "source": "hamed7ir",
+    "category": "Utilities",
+    "description": "Venetium is Chromium 150 (150.0.7871.226) tuned for 2 GB devices, with a built-in ad and tracker blocker (EasyList and EasyPrivacy) that is on by default. This is the 32-bit x86 build. It needs Windows 10 or newer, and it runs on 64-bit Windows too. It's built on Supermium and ungoogled Chromium. The ARM32 build for the Surface RT and Surface 2 is a separate entry.",
+    "dateOriginal": "2026-10-17",
+    "dateSource": "2026-10-17",
+    "size": "156935168",
+    "dependencies": [],
+    "instructionSteps": [
+      "Run Venetium-Setup-150.0.7871.226-x86.exe. It installs for your user only, with shortcuts and an uninstaller, and doesn't need admin.",
+      "The files are not signed, so SmartScreen warns the first time. Click More info, then Run anyway.",
+      "Upgrading from v1.0: just install v1.2 over it.",
+      "The ad and tracker blocker is on by default. To allow a site, use the \"ads blocked\" icon in the address bar, or turn the blocker off in chrome://settings/content/ads."
+    ],
+    "isImmersive": false,
+    "links": [
+      "https://github.com/hamed7ir/venetium",
+      "https://github.com/hamed7ir/venetium/releases/tag/v1.2",
+      "https://github.com/win32ss/supermium",
+      "https://github.com/ungoogled-software/ungoogled-chromium",
+      "https://easylist.to/"
+    ],
+    "architecture": "x86-32",
+    "installParameters": [],
+    "DownloadPath": "Venetium-Setup-150.0.7871.226-x86.exe",
+    "fileType": "exe",
+    "uninstallParameters": [],
+    "isPortable": false,
+    "compatibility": [
+      "10",
+      "11"
+    ],
+    "iconUrl": "https://raw.githubusercontent.com/hamed7ir/venetium/refs/heads/main/branding/Venetium.ico",
+    "screenshots": [
+      "https://github.com/user-attachments/assets/22b96f5f-2fb0-4d95-b1eb-4c093b60b692"
+    ],
+    "downloadUrl": "https://github.com/hamed7ir/venetium/releases/download/v1.2/Venetium-Setup-150.0.7871.226-x86.exe",
+    "language": [
+      "en-US",
+      "af",
+      "am",
+      "ar",
+      "bg",
+      "bn",
+      "ca",
+      "cs",
+      "da",
+      "de",
+      "el",
+      "en-GB",
+      "es",
+      "es-419",
+      "et",
+      "fa",
+      "fi",
+      "fil",
+      "fr",
+      "gu",
+      "he",
+      "hi",
+      "hr",
+      "hu",
+      "id",
+      "it",
+      "ja",
+      "kn",
+      "ko",
+      "lt",
+      "lv",
+      "ml",
+      "mr",
+      "ms",
+      "nb",
+      "nl",
+      "pl",
+      "pt-BR",
+      "pt-PT",
+      "ro",
+      "ru",
+      "sk",
+      "sl",
+      "sr",
+      "sv",
+      "sw",
+      "ta",
+      "te",
+      "th",
+      "tr",
+      "uk",
+      "ur",
+      "vi",
+      "zh-CN",
+      "zh-TW"
+    ],
+    "isTrial": false
+  },
+  {
+    "id": "venetium",
+    "name": "Venetium",
+    "version": "1.2",
+    "author": "hamed7ir",
+    "uploader": "hamed7ir",
+    "source": "hamed7ir",
+    "category": "Utilities",
+    "description": "Venetium is Chromium 150 (150.0.7871.226) for old ARM Windows tablets: the Surface RT (Tegra 3) and Surface 2 (Tegra 4) on Windows 10 build 15035. I wanted a real modern browser on these tablets, and nothing new runs on them anymore. It's built on Supermium and ungoogled Chromium, and the ARM32 port is my own work. Graphics go through Direct3D 9 and ANGLE, because these GPUs have no Direct3D 11. H.264 video is decoded on the GPU, so 720p plays smooth, and the sandbox is on. It has a built-in ad and tracker blocker (EasyList and EasyPrivacy) that is on by default, and it's tuned for 2 GB tablets. Windows RT 8.0 and 8.1 are not supported yet.",
+    "dateOriginal": "2026-10-17",
+    "dateSource": "2026-10-17",
+    "size": "145872384",
+    "dependencies": [],
+    "instructionSteps": [
+      "Run Venetium-Setup-150.0.7871.226-arm32.exe. It installs for your user only, with shortcuts and an uninstaller, and doesn't need admin.",
+      "The files are not signed, so SmartScreen warns the first time. Click More info, then Run anyway.",
+      "Upgrading from v1.0: just install v1.2 over it.",
+      "The ad and tracker blocker is on by default. To allow a site, use the \"ads blocked\" icon in the address bar, or turn the blocker off in chrome://settings/content/ads."
+    ],
+    "isImmersive": false,
+    "links": [
+      "https://github.com/hamed7ir/venetium",
+      "https://github.com/hamed7ir/venetium/releases/tag/v1.2",
+      "https://github.com/win32ss/supermium",
+      "https://github.com/ungoogled-software/ungoogled-chromium",
+      "https://easylist.to/"
+    ],
+    "architecture": "arm32",
+    "installParameters": [],
+    "DownloadPath": "Venetium-Setup-150.0.7871.226-arm32.exe",
+    "fileType": "exe",
+    "uninstallParameters": [],
+    "isPortable": false,
+    "compatibility": [
+      "10"
+    ],
+    "iconUrl": "https://raw.githubusercontent.com/hamed7ir/venetium/refs/heads/main/branding/Venetium.ico",
+    "screenshots": [
+      "https://github.com/user-attachments/assets/22b96f5f-2fb0-4d95-b1eb-4c093b60b692"
+    ],
+    "downloadUrl": "https://github.com/hamed7ir/venetium/releases/download/v1.2/Venetium-Setup-150.0.7871.226-arm32.exe",
+    "language": [
+      "en-US",
+      "af",
+      "am",
+      "ar",
+      "bg",
+      "bn",
+      "ca",
+      "cs",
+      "da",
+      "de",
+      "el",
+      "en-GB",
+      "es",
+      "es-419",
+      "et",
+      "fa",
+      "fi",
+      "fil",
+      "fr",
+      "gu",
+      "he",
+      "hi",
+      "hr",
+      "hu",
+      "id",
+      "it",
+      "ja",
+      "kn",
+      "ko",
+      "lt",
+      "lv",
+      "ml",
+      "mr",
+      "ms",
+      "nb",
+      "nl",
+      "pl",
+      "pt-BR",
+      "pt-PT",
+      "ro",
+      "ru",
+      "sk",
+      "sl",
+      "sr",
+      "sv",
+      "sw",
+      "ta",
+      "te",
+      "th",
+      "tr",
+      "uk",
+      "ur",
+      "vi",
+      "zh-CN",
+      "zh-TW"
+    ],
+    "isTrial": false
+  },
+  {
     "id": "xdm-rt1",
     "name": "Xtreme Download Manager",
     "version": "8.0.29-rt1",
@@ -398,26 +593,26 @@
     "uploader": "hamed7ir",
     "source": "hamed7ir",
     "category": "Utilities",
-    "description": "Xtreme Download Manager 8.0.29 packaged to run on Windows RT 8.0 and 8.1 and on Windows 10 ARM32, all on ARM32 hardware. It performs plain and multi-segment HTTP/HTTPS downloading with resume; the video-download feature is omitted because yt-dlp and ffmpeg are x86 processes that cannot execute on ARM32. This is an unofficial fork of subhra74/xdm by hamed7ir in which no source line is changed — the only modification is the application icon. It needs .NET Framework 4.5 or later and WPF, and because Windows RT does not ship WPF an ARM32 WPF build must be installed once with the included wpf-prerequisite\\wpf-setup.cmd before XDM will start.",
+    "description": "Xtreme Download Manager 8.0.29, set up to run on Windows RT 8.0 and 8.1 and Windows 10 ARM32. It downloads over HTTP and HTTPS in many parts at once, and it can resume. Video download doesn't work, because yt-dlp and ffmpeg are x86 programs and can't run on ARM32. This is my unofficial fork of subhra74/xdm. I didn't change any source code, only the icon. It needs .NET Framework 4.5 or newer and WPF. Windows RT has no WPF, so you have to install an ARM32 WPF build once with wpf-prerequisite\\wpf-setup.cmd (it's in the package) before XDM will start.",
     "dateOriginal": "2026-08-03",
     "dateSource": "2026-08-03",
     "size": "3023259",
     "dependencies": [
-      ".NET Framework 4.5 or later — on Windows RT 8.1 install the RT-specific package https://go.microsoft.com/fwlink/?linkid=2088632, which appears afterwards as KB4486105",
-      "KB2919355, the Windows RT 8.1 Update — required before that .NET package will install",
-      "WPF for ARM32 — not bundled and not redistributable here; obtain the XDA ARM32 WPF port and install it once with the included wpf-prerequisite\\wpf-setup.cmd",
-      "Windows test-signing mode enabled on the device — the packages are unsigned desktop applications"
+      ".NET Framework 4.5 or newer. On Windows RT 8.1 install the RT package from https://go.microsoft.com/fwlink/?linkid=2088632 (it shows up as KB4486105).",
+      "KB2919355, the Windows RT 8.1 Update. The .NET package won't install without it.",
+      "WPF for ARM32. It's not in the package and I can't share it. Get the ARM32 WPF port from XDA and install it once with wpf-prerequisite\\wpf-setup.cmd.",
+      "Windows test-signing mode on the device, because the files are not signed."
     ],
     "instructionSteps": [
-      "Install KB2919355, the Windows RT 8.1 Update, if it is not already present.",
-      "Install the .NET Framework package for Windows RT from https://go.microsoft.com/fwlink/?linkid=2088632 and reboot when it asks.",
-      "Put the device into Windows' test-signing mode so unsigned desktop applications can run.",
-      "Extract XDM-8.0.29-rt1-Setup-AnyCPU.zip, keeping Setup.exe and payload.zip together.",
-      "Download the ARM32 WPF port archive from https://xdaforums.com/t/wpf-for-windows-rt-devices.3763345/ and extract it next to wpf-prerequisite\\wpf-setup.cmd.",
-      "Run wpf-prerequisite\\wpf-setup.cmd /verify to see what is missing; it changes nothing and needs no administrator.",
+      "Install KB2919355 (the Windows RT 8.1 Update) if you don't have it.",
+      "Install the .NET Framework package for Windows RT from https://go.microsoft.com/fwlink/?linkid=2088632, and reboot when it asks.",
+      "Put the device in test-signing mode, so unsigned desktop apps can run.",
+      "Extract XDM-8.0.29-rt1-Setup-AnyCPU.zip. Keep Setup.exe and payload.zip together.",
+      "Download the ARM32 WPF port from https://xdaforums.com/t/wpf-for-windows-rt-devices.3763345/ and extract it next to wpf-prerequisite\\wpf-setup.cmd.",
+      "Run wpf-prerequisite\\wpf-setup.cmd /verify to see what's missing. It doesn't change anything and doesn't need admin.",
       "Run wpf-prerequisite\\wpf-setup.cmd as Administrator to install WPF.",
-      "Run Setup.exe --check to confirm everything is in place; it changes nothing.",
-      "Run Setup.exe to install XDM per user, then start XDM from the Start menu."
+      "Run Setup.exe --check to see if everything is in place. It doesn't change anything.",
+      "Run Setup.exe to install XDM for your user, then start XDM from the Start menu."
     ],
     "isImmersive": false,
     "links": [
