@@ -6,7 +6,7 @@
   "uploader": "hamed7ir",
   "source": "hamed7ir",
   "category": "Utilities",
-  "description": "Venetium is Chromium 150 (150.0.7871.226) tuned for 2 GB devices, with a built-in ad and tracker blocker (EasyList and EasyPrivacy) that is on by default. This is the 32-bit x86 build. It needs Windows 10 or newer, and it runs on 64-bit Windows too. It's built on Supermium and ungoogled Chromium. The ARM32 build for the Surface RT and Surface 2 is a separate entry.",
+  "description": "Venetium is Chromium 150 (150.0.7871.226) tuned for 2 GB devices, with a built-in ad and tracker blocker (EasyList and EasyPrivacy) that is on by default. This is the 32-bit x86 build. It needs Windows 10 or newer, and it runs on 64-bit Windows too. It's built on Supermium and ungoogled Chromium. The ARM32 builds for the Surface RT and Surface 2 are separate entries.",
   "dateOriginal": "2026-10-17",
   "dateSource": "2026-10-17",
   "size": "156935168",

@@ -1,0 +1,50 @@
+{
+  "id": "kodi-rt",
+  "name": "Kodi RT",
+  "version": "1.1",
+  "author": "hamed7ir",
+  "uploader": "hamed7ir",
+  "source": "hamed7ir",
+  "category": "Multimedia",
+  "description": "Kodi RT is Kodi, the media center, for old ARM Windows tablets: the Surface RT (Tegra 3) and Surface 2 (Tegra 4) on Windows RT 8.1. Kodi never had a Windows build for ARM32, so I ported it, the same way as Venetium. It's Kodi master (23.0 alpha) with my changes on top, so expect alpha bugs. 1080p H.264 plays smooth with hardware decode on the GPU at about 10% CPU, and 720p 10-bit HEVC (x265) plays smooth in software, because it's a PGO and ThinLTO build with NEON code in FFmpeg. Estuary works with touch: a tap is a tap, and a two-finger tap is back. Python 3.14 add-ons work, with ctypes, pycryptodome and Pillow, and the setup has the binary add-ons that Kodi's repository doesn't have for ARM32, like inputstream.adaptive (YouTube needs it) and IPTV Simple. I tested it on both tablets. Kodi RT is not an official Kodi build, and Team Kodi has nothing to do with it, so please report bugs to me.",
+  "dateOriginal": "2026-11-14",
+  "dateSource": "2026-11-14",
+  "size": "76368384",
+  "dependencies": [
+    ".NET Framework 4.0 or newer, only for the installer. Windows RT 8.1 already has it. Kodi itself needs nothing."
+  ],
+  "instructionSteps": [
+    "On Windows RT, jailbreak the device first. RT only runs unsigned desktop apps after a jailbreak.",
+    "Run Kodi-RT-Setup-1.1-arm32.exe. It installs only for your user (to %LocalAppData%\\Programs\\Kodi RT) with Start menu and desktop shortcuts, and doesn't need admin. If you're not sure your device has everything, the setup has a Check requirements button.",
+    "The files are not signed, so SmartScreen warns the first time. Click More info, then Run anyway.",
+    "Upgrading from 1.0: just install 1.1 over it. Your Kodi data stays.",
+    "Kodi keeps your library, add-ons and settings in %AppData%\\Kodi. Uninstalling (from Control Panel, or with uninstall.exe) leaves them there.",
+    "To make software video fast enough, Kodi RT skips the deblocking of software-decoded video on the tablet (skiploopfilter 48). To change it, put your own skiploopfilter in %AppData%\\Kodi\\userdata\\advancedsettings.xml. 0 is Kodi's default: full quality, but slower.",
+    "Elementum doesn't work on Windows RT, because its engine has no Windows ARM build."
+  ],
+  "isImmersive": false,
+  "links": [
+    "https://github.com/hamed7ir/kodi-rt",
+    "https://github.com/hamed7ir/kodi-rt/releases/tag/v1.1",
+    "https://github.com/xbmc/xbmc",
+    "https://kodi.tv/"
+  ],
+  "architecture": "arm32",
+  "installParameters": [],
+  "DownloadPath": "Kodi-RT-Setup-1.1-arm32.exe",
+  "fileType": "exe",
+  "uninstallParameters": [],
+  "isPortable": false,
+  "compatibility": [
+    "8.1"
+  ],
+  "iconUrl": "https://raw.githubusercontent.com/hamed7ir/kodi-rt/refs/tags/v1.1/kodi-rt/installer/kodi.ico",
+  "screenshots": [
+    "https://raw.githubusercontent.com/hamed7ir/kodi-rt/refs/tags/v1.1/kodi-rt/branding/poster-v1.0.png"
+  ],
+  "downloadUrl": "https://github.com/hamed7ir/kodi-rt/releases/download/v1.1/Kodi-RT-Setup-1.1-arm32.exe",
+  "language": [
+    "en-US"
+  ],
+  "isTrial": false
+}

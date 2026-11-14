@@ -1,0 +1,51 @@
+{
+  "id": "kodi-rt-x86",
+  "name": "Kodi RT (x86)",
+  "version": "1.1",
+  "author": "hamed7ir",
+  "uploader": "hamed7ir",
+  "source": "hamed7ir",
+  "category": "Multimedia",
+  "description": "Kodi RT is my port of Kodi, the media center, to old ARM Windows tablets. This is its 32-bit x86 build for Windows 8.1 and newer, made from the same changes. It runs on 64-bit Windows too, but there the x64 build is the better pick. It's Kodi master (23.0 alpha), so expect alpha bugs, with Python 3.14 for add-ons and skins, including ctypes, pycryptodome and Pillow. I only checked it on my build server (Windows Server 2022 over RDP, with no GPU): it installs, upgrades and uninstalls cleanly, and Kodi starts, plays H.264 video in software and runs Python add-ons. I haven't tried it on a PC with a real GPU yet. Binary add-ons from Kodi's repository need the Microsoft Visual C++ 2015 to 2022 redistributable. Kodi RT is not an official Kodi build, and Team Kodi has nothing to do with it. The ARM32 build for the Surface RT and Surface 2 is a separate entry.",
+  "dateOriginal": "2026-11-14",
+  "dateSource": "2026-11-14",
+  "size": "65248768",
+  "dependencies": [
+    ".NET Framework 4.0 or newer, only for the installer. Windows 8.1 and newer already have it.",
+    "The Microsoft Visual C++ 2015 to 2022 redistributable (x86), only for binary add-ons from Kodi's repository. Kodi itself doesn't need it."
+  ],
+  "instructionSteps": [
+    "Run Kodi-RT-Setup-1.1-x86.exe. It installs only for your user (to %LocalAppData%\\Programs\\Kodi RT) with Start menu and desktop shortcuts, and doesn't need admin. If you're not sure your PC has everything, the setup has a Check requirements button.",
+    "The files are not signed, so SmartScreen warns the first time. Click More info, then Run anyway.",
+    "Upgrading from 1.0: just install 1.1 over it. Your Kodi data stays.",
+    "Kodi keeps your library, add-ons and settings in %AppData%\\Kodi, the same folder the official Kodi uses. Uninstalling (from Control Panel, or with uninstall.exe) leaves them there.",
+    "Binary add-ons from Kodi's repository, like inputstream.adaptive, need the Microsoft Visual C++ 2015 to 2022 redistributable (x86). Install it if one of them doesn't load."
+  ],
+  "isImmersive": false,
+  "links": [
+    "https://github.com/hamed7ir/kodi-rt",
+    "https://github.com/hamed7ir/kodi-rt/releases/tag/v1.1",
+    "https://github.com/xbmc/xbmc",
+    "https://kodi.tv/"
+  ],
+  "architecture": "x86-32",
+  "installParameters": [],
+  "DownloadPath": "Kodi-RT-Setup-1.1-x86.exe",
+  "fileType": "exe",
+  "uninstallParameters": [],
+  "isPortable": false,
+  "compatibility": [
+    "8.1",
+    "10",
+    "11"
+  ],
+  "iconUrl": "https://raw.githubusercontent.com/hamed7ir/kodi-rt/refs/tags/v1.1/kodi-rt/installer/kodi.ico",
+  "screenshots": [
+    "https://raw.githubusercontent.com/hamed7ir/kodi-rt/refs/tags/v1.1/kodi-rt/branding/poster-v1.0.png"
+  ],
+  "downloadUrl": "https://github.com/hamed7ir/kodi-rt/releases/download/v1.1/Kodi-RT-Setup-1.1-x86.exe",
+  "language": [
+    "en-US"
+  ],
+  "isTrial": false
+}
