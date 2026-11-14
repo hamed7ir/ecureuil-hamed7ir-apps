@@ -165,15 +165,15 @@
   {
     "id": "finestra",
     "name": "Finestra",
-    "version": "2.0.0",
+    "version": "2.0.2",
     "author": "hamed7ir",
     "uploader": "hamed7ir",
     "source": "hamed7ir",
     "category": "Utilities",
-    "description": "Finestra is a remote connection manager: RDP, SSH, SFTP, FTP and FTPS in one app, with tabs. I made it mainly for Windows RT, because there is no good modern remote desktop client for it. For RDP it uses FreeRDP 3.32.2 (the SDL3 client) with my changes, built for ARM32 and x64. On a touch screen there is a Touch / Mouse switch, so swipe and pinch go to the remote PC. One build runs on Windows RT 8.0 and 8.1, Windows 10 ARM32, and x86 and x64 Windows 10 and 11. You need .NET Framework 4.7 or newer, and on RT 8.0 that means the .NET 4.8 update, which is hard to find right now. On 32-bit x86 Windows you have to add the RDP engine yourself, SSH and FTP work without it. The files are not signed, and Windows RT has to be jailbroken.",
-    "dateOriginal": "2026-10-23",
-    "dateSource": "2026-10-23",
-    "size": "14972928",
+    "description": "Finestra is a remote connection manager: RDP, SSH, SFTP, FTP and FTPS in one app, with tabs. I made it mainly for Windows RT, because there is no good modern remote desktop client for it. For RDP it uses FreeRDP 3.32.2 (the SDL3 client) with my changes, built for ARM32 and x64. On a touch screen there is a Touch / Mouse switch, so swipe and pinch go to the remote PC. You can copy and paste files between your device and the remote PC, both ways. One build runs on Windows RT 8.0 and 8.1, Windows 10 ARM32, and x86 and x64 Windows 10 and 11. You need .NET Framework 4.7 or newer, and on RT 8.0 that means the .NET 4.8 update, which is hard to find right now. On 32-bit x86 Windows you have to add the RDP engine yourself, SSH and FTP work without it. The files are not signed, and Windows RT has to be jailbroken.",
+    "dateOriginal": "2026-10-27",
+    "dateSource": "2026-10-27",
+    "size": "15003648",
     "dependencies": [
       ".NET Framework 4.7 or newer",
       "Windows RT 8.0 only: the .NET Framework 4.8 update. It's hard to find for RT 8.0 right now."
@@ -182,21 +182,23 @@
       "Install .NET Framework 4.7 or newer if you don't have it. Windows 10 1703 and later already have it.",
       "On Windows RT 8.0 install the .NET Framework 4.8 update first. The app won't start without it, and it's hard to find for RT 8.0 right now.",
       "On Windows RT, jailbreak the device first. RT only runs unsigned desktop apps after a jailbreak.",
-      "Run Finestra-Setup-2.0.0.exe. It installs for your user only into %LocalAppData%\\Programs\\Finestra, with no admin needed. You get a Start menu shortcut and an uninstall entry.",
+      "Run Finestra-Setup-2.0.2.exe. It installs for your user only into %LocalAppData%\\Programs\\Finestra, with no admin needed. You get a Start menu shortcut and an uninstall entry.",
       "The files are not signed, so SmartScreen warns the first time. Click More info, then Run anyway.",
+      "Upgrading from 2.0.0 or 2.0.1: just install 2.0.2 over it. Your connections and settings are kept.",
       "Upgrading from 1.0.3: install into the same folder and your connections and settings are kept. If you set your own engine path in Settings > RDP engine, clear it, or you keep the old engine.",
       "On a touch screen RDP starts in Touch mode. You can change it with the switch on the tab bar or in Settings > Session.",
+      "To copy files in RDP, copy them on one side and paste them on the other. In the connection settings, Copy files can be set to one way only, or off.",
       "On 32-bit x86 Windows you have to add the RDP engine yourself. Read README.txt in engine\\x86. SSH and FTP work without it."
     ],
     "isImmersive": false,
     "links": [
       "https://github.com/hamed7ir/Finestra",
-      "https://github.com/hamed7ir/Finestra/releases/tag/v2.0.0",
+      "https://github.com/hamed7ir/Finestra/releases/tag/v2.0.2",
       "https://github.com/hamed7ir/FreeRDP/tree/finestra-arm32-rt-3.32"
     ],
     "architecture": "neutral",
     "installParameters": [],
-    "DownloadPath": "Finestra-Setup-2.0.0.exe",
+    "DownloadPath": "Finestra-Setup-2.0.2.exe",
     "fileType": "exe",
     "uninstallParameters": [],
     "isPortable": false,
@@ -213,7 +215,159 @@
       "https://raw.githubusercontent.com/hamed7ir/Finestra/refs/heads/main/docs/session-tabs2.jpg",
       "https://raw.githubusercontent.com/hamed7ir/Finestra/refs/heads/main/docs/about.png"
     ],
-    "downloadUrl": "https://github.com/hamed7ir/Finestra/releases/download/v2.0.0/Finestra-Setup-2.0.0.exe",
+    "downloadUrl": "https://github.com/hamed7ir/Finestra/releases/download/v2.0.2/Finestra-Setup-2.0.2.exe",
+    "language": [
+      "en-US"
+    ],
+    "isTrial": false
+  },
+  {
+    "id": "kodi-rt-x64",
+    "name": "Kodi RT (x64)",
+    "version": "1.1",
+    "author": "hamed7ir",
+    "uploader": "hamed7ir",
+    "source": "hamed7ir",
+    "category": "Multimedia",
+    "description": "Kodi RT is my port of Kodi, the media center, to old ARM Windows tablets. This is its x64 build for 64-bit Windows 8.1 and newer, made from the same changes. It's Kodi master (23.0 alpha), so expect alpha bugs, with Python 3.14 for add-ons and skins, including ctypes, pycryptodome and Pillow. I only checked it on my build server (Windows Server 2022 over RDP, with no GPU): it installs, upgrades and uninstalls cleanly, and Kodi starts, plays H.264 video in software and runs Python add-ons. I haven't tried it on a PC with a real GPU yet. Binary add-ons from Kodi's repository need the Microsoft Visual C++ 2015 to 2022 redistributable. Kodi RT is not an official Kodi build, and Team Kodi has nothing to do with it. The ARM32 build for the Surface RT and Surface 2 is a separate entry.",
+    "dateOriginal": "2026-11-14",
+    "dateSource": "2026-11-14",
+    "size": "67844096",
+    "dependencies": [
+      ".NET Framework 4.0 or newer, only for the installer. Windows 8.1 and newer already have it.",
+      "The Microsoft Visual C++ 2015 to 2022 redistributable (x64), only for binary add-ons from Kodi's repository. Kodi itself doesn't need it."
+    ],
+    "instructionSteps": [
+      "Run Kodi-RT-Setup-1.1-x64.exe. It installs only for your user (to %LocalAppData%\\Programs\\Kodi RT) with Start menu and desktop shortcuts, and doesn't need admin. If you're not sure your PC has everything, the setup has a Check requirements button.",
+      "The files are not signed, so SmartScreen warns the first time. Click More info, then Run anyway.",
+      "Upgrading from 1.0: just install 1.1 over it. Your Kodi data stays.",
+      "Kodi keeps your library, add-ons and settings in %AppData%\\Kodi, the same folder the official Kodi uses. Uninstalling (from Control Panel, or with uninstall.exe) leaves them there.",
+      "Binary add-ons from Kodi's repository, like inputstream.adaptive, need the Microsoft Visual C++ 2015 to 2022 redistributable (x64). Install it if one of them doesn't load."
+    ],
+    "isImmersive": false,
+    "links": [
+      "https://github.com/hamed7ir/kodi-rt",
+      "https://github.com/hamed7ir/kodi-rt/releases/tag/v1.1",
+      "https://github.com/xbmc/xbmc",
+      "https://kodi.tv/"
+    ],
+    "architecture": "x86-64",
+    "installParameters": [],
+    "DownloadPath": "Kodi-RT-Setup-1.1-x64.exe",
+    "fileType": "exe",
+    "uninstallParameters": [],
+    "isPortable": false,
+    "compatibility": [
+      "8.1",
+      "10",
+      "11"
+    ],
+    "iconUrl": "https://raw.githubusercontent.com/hamed7ir/kodi-rt/refs/tags/v1.1/kodi-rt/installer/kodi.ico",
+    "screenshots": [
+      "https://raw.githubusercontent.com/hamed7ir/kodi-rt/refs/tags/v1.1/kodi-rt/branding/poster-v1.0.png"
+    ],
+    "downloadUrl": "https://github.com/hamed7ir/kodi-rt/releases/download/v1.1/Kodi-RT-Setup-1.1-x64.exe",
+    "language": [
+      "en-US"
+    ],
+    "isTrial": false
+  },
+  {
+    "id": "kodi-rt-x86",
+    "name": "Kodi RT (x86)",
+    "version": "1.1",
+    "author": "hamed7ir",
+    "uploader": "hamed7ir",
+    "source": "hamed7ir",
+    "category": "Multimedia",
+    "description": "Kodi RT is my port of Kodi, the media center, to old ARM Windows tablets. This is its 32-bit x86 build for Windows 8.1 and newer, made from the same changes. It runs on 64-bit Windows too, but there the x64 build is the better pick. It's Kodi master (23.0 alpha), so expect alpha bugs, with Python 3.14 for add-ons and skins, including ctypes, pycryptodome and Pillow. I only checked it on my build server (Windows Server 2022 over RDP, with no GPU): it installs, upgrades and uninstalls cleanly, and Kodi starts, plays H.264 video in software and runs Python add-ons. I haven't tried it on a PC with a real GPU yet. Binary add-ons from Kodi's repository need the Microsoft Visual C++ 2015 to 2022 redistributable. Kodi RT is not an official Kodi build, and Team Kodi has nothing to do with it. The ARM32 build for the Surface RT and Surface 2 is a separate entry.",
+    "dateOriginal": "2026-11-14",
+    "dateSource": "2026-11-14",
+    "size": "65248768",
+    "dependencies": [
+      ".NET Framework 4.0 or newer, only for the installer. Windows 8.1 and newer already have it.",
+      "The Microsoft Visual C++ 2015 to 2022 redistributable (x86), only for binary add-ons from Kodi's repository. Kodi itself doesn't need it."
+    ],
+    "instructionSteps": [
+      "Run Kodi-RT-Setup-1.1-x86.exe. It installs only for your user (to %LocalAppData%\\Programs\\Kodi RT) with Start menu and desktop shortcuts, and doesn't need admin. If you're not sure your PC has everything, the setup has a Check requirements button.",
+      "The files are not signed, so SmartScreen warns the first time. Click More info, then Run anyway.",
+      "Upgrading from 1.0: just install 1.1 over it. Your Kodi data stays.",
+      "Kodi keeps your library, add-ons and settings in %AppData%\\Kodi, the same folder the official Kodi uses. Uninstalling (from Control Panel, or with uninstall.exe) leaves them there.",
+      "Binary add-ons from Kodi's repository, like inputstream.adaptive, need the Microsoft Visual C++ 2015 to 2022 redistributable (x86). Install it if one of them doesn't load."
+    ],
+    "isImmersive": false,
+    "links": [
+      "https://github.com/hamed7ir/kodi-rt",
+      "https://github.com/hamed7ir/kodi-rt/releases/tag/v1.1",
+      "https://github.com/xbmc/xbmc",
+      "https://kodi.tv/"
+    ],
+    "architecture": "x86-32",
+    "installParameters": [],
+    "DownloadPath": "Kodi-RT-Setup-1.1-x86.exe",
+    "fileType": "exe",
+    "uninstallParameters": [],
+    "isPortable": false,
+    "compatibility": [
+      "8.1",
+      "10",
+      "11"
+    ],
+    "iconUrl": "https://raw.githubusercontent.com/hamed7ir/kodi-rt/refs/tags/v1.1/kodi-rt/installer/kodi.ico",
+    "screenshots": [
+      "https://raw.githubusercontent.com/hamed7ir/kodi-rt/refs/tags/v1.1/kodi-rt/branding/poster-v1.0.png"
+    ],
+    "downloadUrl": "https://github.com/hamed7ir/kodi-rt/releases/download/v1.1/Kodi-RT-Setup-1.1-x86.exe",
+    "language": [
+      "en-US"
+    ],
+    "isTrial": false
+  },
+  {
+    "id": "kodi-rt",
+    "name": "Kodi RT",
+    "version": "1.1",
+    "author": "hamed7ir",
+    "uploader": "hamed7ir",
+    "source": "hamed7ir",
+    "category": "Multimedia",
+    "description": "Kodi RT is Kodi, the media center, for old ARM Windows tablets: the Surface RT (Tegra 3) and Surface 2 (Tegra 4) on Windows RT 8.1. Kodi never had a Windows build for ARM32, so I ported it, the same way as Venetium. It's Kodi master (23.0 alpha) with my changes on top, so expect alpha bugs. 1080p H.264 plays smooth with hardware decode on the GPU at about 10% CPU, and 720p 10-bit HEVC (x265) plays smooth in software, because it's a PGO and ThinLTO build with NEON code in FFmpeg. Estuary works with touch: a tap is a tap, and a two-finger tap is back. Python 3.14 add-ons work, with ctypes, pycryptodome and Pillow, and the setup has the binary add-ons that Kodi's repository doesn't have for ARM32, like inputstream.adaptive (YouTube needs it) and IPTV Simple. I tested it on both tablets. Kodi RT is not an official Kodi build, and Team Kodi has nothing to do with it, so please report bugs to me.",
+    "dateOriginal": "2026-11-14",
+    "dateSource": "2026-11-14",
+    "size": "76368384",
+    "dependencies": [
+      ".NET Framework 4.0 or newer, only for the installer. Windows RT 8.1 already has it. Kodi itself needs nothing."
+    ],
+    "instructionSteps": [
+      "On Windows RT, jailbreak the device first. RT only runs unsigned desktop apps after a jailbreak.",
+      "Run Kodi-RT-Setup-1.1-arm32.exe. It installs only for your user (to %LocalAppData%\\Programs\\Kodi RT) with Start menu and desktop shortcuts, and doesn't need admin. If you're not sure your device has everything, the setup has a Check requirements button.",
+      "The files are not signed, so SmartScreen warns the first time. Click More info, then Run anyway.",
+      "Upgrading from 1.0: just install 1.1 over it. Your Kodi data stays.",
+      "Kodi keeps your library, add-ons and settings in %AppData%\\Kodi. Uninstalling (from Control Panel, or with uninstall.exe) leaves them there.",
+      "To make software video fast enough, Kodi RT skips the deblocking of software-decoded video on the tablet (skiploopfilter 48). To change it, put your own skiploopfilter in %AppData%\\Kodi\\userdata\\advancedsettings.xml. 0 is Kodi's default: full quality, but slower.",
+      "Elementum doesn't work on Windows RT, because its engine has no Windows ARM build."
+    ],
+    "isImmersive": false,
+    "links": [
+      "https://github.com/hamed7ir/kodi-rt",
+      "https://github.com/hamed7ir/kodi-rt/releases/tag/v1.1",
+      "https://github.com/xbmc/xbmc",
+      "https://kodi.tv/"
+    ],
+    "architecture": "arm32",
+    "installParameters": [],
+    "DownloadPath": "Kodi-RT-Setup-1.1-arm32.exe",
+    "fileType": "exe",
+    "uninstallParameters": [],
+    "isPortable": false,
+    "compatibility": [
+      "8.1"
+    ],
+    "iconUrl": "https://raw.githubusercontent.com/hamed7ir/kodi-rt/refs/tags/v1.1/kodi-rt/installer/kodi.ico",
+    "screenshots": [
+      "https://raw.githubusercontent.com/hamed7ir/kodi-rt/refs/tags/v1.1/kodi-rt/branding/poster-v1.0.png"
+    ],
+    "downloadUrl": "https://github.com/hamed7ir/kodi-rt/releases/download/v1.1/Kodi-RT-Setup-1.1-arm32.exe",
     "language": [
       "en-US"
     ],
@@ -385,6 +539,110 @@
     "isTrial": false
   },
   {
+    "id": "venetium-thumb2",
+    "name": "Venetium (Windows RT)",
+    "version": "1.3.2",
+    "author": "hamed7ir",
+    "uploader": "hamed7ir",
+    "source": "hamed7ir",
+    "category": "Utilities",
+    "description": "Venetium is Chromium 150 (150.0.7871.226) for old ARM Windows tablets. This is the thumb2 build for the original Windows RT 8.0 and 8.1, on the Surface RT (Tegra 3) and Surface 2 (Tegra 4). Windows RT only runs Thumb-2 code, so I ported V8, the JavaScript engine of Chromium, to Thumb-2, and the JIT is on. It's built on Supermium and ungoogled Chromium, and it's a PGO and ThinLTO build. I tested it on my Surface RT with Windows RT 8.1: pages, scrolling and video work, and the sandbox is on. Telegram Web and Discord work too, and so does casting to a TV. RT 8.0 should work, but I haven't tested it on a device yet, and there it draws in software, because RT 8.0 has no Direct3D shader compiler. Qualcomm devices like the Lumia 2520 no longer crash at start, but they still need testers. It has a built-in ad and tracker blocker (EasyList and EasyPrivacy) that is on by default. On Windows 10 build 15035, use the normal ARM32 build, Venetium. It's faster there.",
+    "dateOriginal": "2026-11-08",
+    "dateSource": "2026-11-08",
+    "size": "145602560",
+    "dependencies": [],
+    "instructionSteps": [
+      "On Windows RT, jailbreak the device first. RT only runs unsigned desktop apps after a jailbreak.",
+      "Run Venetium-Setup-150.0.7871.226-win8-8.1-arm32-thumb2.exe. It installs for your user only, with shortcuts and an uninstaller, and doesn't need admin.",
+      "The files are not signed, so SmartScreen warns the first time. Click More info, then Run anyway.",
+      "Upgrading from 1.3: close Venetium, then install 1.3.2 over it.",
+      "The ad and tracker blocker is on by default. To allow a site, use the \"ads blocked\" icon in the address bar, or turn the blocker off in chrome://settings/content/ads.",
+      "If a video stops playing, start Venetium with --disable-features=VenetiumArm32CodecSteering and tell me the site."
+    ],
+    "isImmersive": false,
+    "links": [
+      "https://github.com/hamed7ir/venetium",
+      "https://github.com/hamed7ir/venetium/releases/tag/v1.3.2",
+      "https://github.com/hamed7ir/v8-thumb2-rt",
+      "https://github.com/win32ss/supermium",
+      "https://github.com/ungoogled-software/ungoogled-chromium",
+      "https://easylist.to/"
+    ],
+    "architecture": "arm32",
+    "installParameters": [],
+    "DownloadPath": "Venetium-Setup-150.0.7871.226-win8-8.1-arm32-thumb2.exe",
+    "fileType": "exe",
+    "uninstallParameters": [],
+    "isPortable": false,
+    "compatibility": [
+      "8.0",
+      "8.1"
+    ],
+    "iconUrl": "https://raw.githubusercontent.com/hamed7ir/venetium/refs/heads/main/branding/Venetium.ico",
+    "screenshots": [
+      "https://github.com/user-attachments/assets/22b96f5f-2fb0-4d95-b1eb-4c093b60b692"
+    ],
+    "downloadUrl": "https://github.com/hamed7ir/venetium/releases/download/v1.3.2/Venetium-Setup-150.0.7871.226-win8-8.1-arm32-thumb2.exe",
+    "language": [
+      "en-US",
+      "af",
+      "am",
+      "ar",
+      "bg",
+      "bn",
+      "ca",
+      "cs",
+      "da",
+      "de",
+      "el",
+      "en-GB",
+      "es",
+      "es-419",
+      "et",
+      "fa",
+      "fi",
+      "fil",
+      "fr",
+      "gu",
+      "he",
+      "hi",
+      "hr",
+      "hu",
+      "id",
+      "it",
+      "ja",
+      "kn",
+      "ko",
+      "lt",
+      "lv",
+      "ml",
+      "mr",
+      "ms",
+      "nb",
+      "nl",
+      "pl",
+      "pt-BR",
+      "pt-PT",
+      "ro",
+      "ru",
+      "sk",
+      "sl",
+      "sr",
+      "sv",
+      "sw",
+      "ta",
+      "te",
+      "th",
+      "tr",
+      "uk",
+      "ur",
+      "vi",
+      "zh-CN",
+      "zh-TW"
+    ],
+    "isTrial": false
+  },
+  {
     "id": "venetium-x86",
     "name": "Venetium (x86)",
     "version": "1.2",
@@ -392,7 +650,7 @@
     "uploader": "hamed7ir",
     "source": "hamed7ir",
     "category": "Utilities",
-    "description": "Venetium is Chromium 150 (150.0.7871.226) tuned for 2 GB devices, with a built-in ad and tracker blocker (EasyList and EasyPrivacy) that is on by default. This is the 32-bit x86 build. It needs Windows 10 or newer, and it runs on 64-bit Windows too. It's built on Supermium and ungoogled Chromium. The ARM32 build for the Surface RT and Surface 2 is a separate entry.",
+    "description": "Venetium is Chromium 150 (150.0.7871.226) tuned for 2 GB devices, with a built-in ad and tracker blocker (EasyList and EasyPrivacy) that is on by default. This is the 32-bit x86 build. It needs Windows 10 or newer, and it runs on 64-bit Windows too. It's built on Supermium and ungoogled Chromium. The ARM32 builds for the Surface RT and Surface 2 are separate entries.",
     "dateOriginal": "2026-10-17",
     "dateSource": "2026-10-17",
     "size": "156935168",
@@ -488,26 +746,27 @@
   {
     "id": "venetium",
     "name": "Venetium",
-    "version": "1.2",
+    "version": "1.3.2",
     "author": "hamed7ir",
     "uploader": "hamed7ir",
     "source": "hamed7ir",
     "category": "Utilities",
-    "description": "Venetium is Chromium 150 (150.0.7871.226) for old ARM Windows tablets: the Surface RT (Tegra 3) and Surface 2 (Tegra 4) on Windows 10 build 15035. I wanted a real modern browser on these tablets, and nothing new runs on them anymore. It's built on Supermium and ungoogled Chromium, and the ARM32 port is my own work. Graphics go through Direct3D 9 and ANGLE, because these GPUs have no Direct3D 11. H.264 video is decoded on the GPU, so 720p plays smooth, and the sandbox is on. It has a built-in ad and tracker blocker (EasyList and EasyPrivacy) that is on by default, and it's tuned for 2 GB tablets. Windows RT 8.0 and 8.1 are not supported yet.",
-    "dateOriginal": "2026-10-17",
-    "dateSource": "2026-10-17",
-    "size": "145872384",
+    "description": "Venetium is Chromium 150 (150.0.7871.226) for old ARM Windows tablets: the Surface RT (Tegra 3) and Surface 2 (Tegra 4) on Windows 10 build 15035. I wanted a real modern browser on these tablets, and nothing new runs on them anymore. It's built on Supermium and ungoogled Chromium, and the ARM32 port is my own work. Since 1.3 it's a PGO and ThinLTO build, about 50% faster on the Surface 2. Graphics go through Direct3D 9 and ANGLE, because these GPUs have no Direct3D 11. H.264 video is decoded on the GPU, so 720p plays smooth, and the sandbox is on. It has a built-in ad and tracker blocker (EasyList and EasyPrivacy) that is on by default, and it's tuned for 2 GB tablets. It also has fixes for Lumias with Qualcomm Adreno GPUs, tested on a Lumia 735, but they still need more testers. For Windows RT 8.0 and 8.1 there is a separate thumb2 build: Venetium (Windows RT).",
+    "dateOriginal": "2026-11-08",
+    "dateSource": "2026-11-08",
+    "size": "145567744",
     "dependencies": [],
     "instructionSteps": [
       "Run Venetium-Setup-150.0.7871.226-arm32.exe. It installs for your user only, with shortcuts and an uninstaller, and doesn't need admin.",
       "The files are not signed, so SmartScreen warns the first time. Click More info, then Run anyway.",
-      "Upgrading from v1.0: just install v1.2 over it.",
-      "The ad and tracker blocker is on by default. To allow a site, use the \"ads blocked\" icon in the address bar, or turn the blocker off in chrome://settings/content/ads."
+      "Upgrading from an older version: close Venetium, then install 1.3.2 over it.",
+      "The ad and tracker blocker is on by default. To allow a site, use the \"ads blocked\" icon in the address bar, or turn the blocker off in chrome://settings/content/ads.",
+      "If a video stops playing, start Venetium with --disable-features=VenetiumArm32CodecSteering and tell me the site."
     ],
     "isImmersive": false,
     "links": [
       "https://github.com/hamed7ir/venetium",
-      "https://github.com/hamed7ir/venetium/releases/tag/v1.2",
+      "https://github.com/hamed7ir/venetium/releases/tag/v1.3.2",
       "https://github.com/win32ss/supermium",
       "https://github.com/ungoogled-software/ungoogled-chromium",
       "https://easylist.to/"
@@ -525,7 +784,7 @@
     "screenshots": [
       "https://github.com/user-attachments/assets/22b96f5f-2fb0-4d95-b1eb-4c093b60b692"
     ],
-    "downloadUrl": "https://github.com/hamed7ir/venetium/releases/download/v1.2/Venetium-Setup-150.0.7871.226-arm32.exe",
+    "downloadUrl": "https://github.com/hamed7ir/venetium/releases/download/v1.3.2/Venetium-Setup-150.0.7871.226-arm32.exe",
     "language": [
       "en-US",
       "af",
