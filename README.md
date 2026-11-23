@@ -9,14 +9,14 @@ each app from its own GitHub release.
 
 ## What's in it
 
-9 apps, 14 entries. Some apps have more than one build, and every build is its own entry: Kodi RT has
+10 apps, 16 entries. Some apps have more than one build, and every build is its own entry: Kodi RT has
 an ARM32, an x64 and an x86 build, Venetium has two ARM32 builds (one for Windows 10, one for Windows RT)
-and an x86 build, and DroidFinestra has an ARM32 and an x64 build.
+and an x86 build, and DroidFinestra and 7-Zip RT each have an ARM32 and an x64 build.
 
 | App | Version | Category | Architecture | Runs on |
 |---|---|---|---|---|
 | [Finestra](https://github.com/hamed7ir/Finestra): RDP, SSH, SFTP, FTP and FTPS client | 2.0.2 | Utilities | neutral | RT 8.0, RT 8.1, Windows 10 ARM32, x86 / x64 Windows 10 and 11 |
-| [TelegArm](https://github.com/hamed7ir/TelegArm): Telegram client with calls | 2.0.0 | Utilities | neutral | RT 8.0, RT 8.1, Windows 10 ARM32, Windows 8.1 to 11 (x86, x64, ARM64), Windows 7 without calls |
+| [TelegArm](https://github.com/hamed7ir/TelegArm): Telegram client with calls | 2.1.0 | Utilities | neutral | RT 8.0, RT 8.1, Windows 10 ARM32, Windows 8.1 to 11 (x86, x64, ARM64), Windows 7 without calls |
 | [CS-Ray](https://github.com/hamed7ir/CS-Ray): proxy client (VLESS, REALITY, VMess, Shadowsocks) | 2.0.0 | Utilities | neutral | RT 8.0, RT 8.1, Windows 10 ARM32, x86 / x64 Windows 7 to 11 |
 | [Venetium](https://github.com/hamed7ir/venetium): Chromium 150 browser | 1.3.2 | Utilities | arm32 | Windows 10 ARM32 (build 15035) |
 | [Venetium (Windows RT)](https://github.com/hamed7ir/venetium): the same browser, thumb2 build for RT | 1.3.2 | Utilities | arm32 | RT 8.1, RT 8.0 (not tested on a device yet) |
@@ -24,6 +24,8 @@ and an x86 build, and DroidFinestra has an ARM32 and an x64 build.
 | [Kodi RT](https://github.com/hamed7ir/kodi-rt): media center, my port of [Kodi](https://kodi.tv/) (23.0 alpha) | 1.1 | Multimedia | arm32 | RT 8.1 |
 | [Kodi RT (x64)](https://github.com/hamed7ir/kodi-rt): the same port, x64 build | 1.1 | Multimedia | x86-64 | 64-bit Windows 8.1 to 11 |
 | [Kodi RT (x86)](https://github.com/hamed7ir/kodi-rt): the same port, x86 build | 1.1 | Multimedia | x86-32 | Windows 8.1 to 11 |
+| [7-Zip RT](https://github.com/hamed7ir/7zip-rt): file archiver, my fork of [7-Zip](https://7-zip.org/) | 26.06 | Utilities | arm32 | RT 8.1, Windows 10 ARM32 |
+| [7-Zip RT (x64)](https://github.com/hamed7ir/7zip-rt): the same fork, x64 build | 26.06 | Utilities | x86-64 | 64-bit Windows 7 to 11 |
 | [DroidFinestra](https://github.com/hamed7ir/DroidFinestra): use your Android phone from Windows (scrcpy GUI) | 1.0.0 | Utilities | arm32 | RT 8.0, RT 8.1, Windows 10 ARM32 |
 | [DroidFinestra (x64)](https://github.com/hamed7ir/DroidFinestra): the same app, x64 build | 1.0.0 | Utilities | x86-64 | 64-bit Windows 10 and 11 |
 | [Xtreme Download Manager](https://github.com/hamed7ir/xdm): download manager, my fork of [subhra74/xdm](https://github.com/subhra74/xdm) | 8.0.29-rt1 | Utilities | arm32 | RT 8.0, RT 8.1, Windows 10 ARM32 |
@@ -68,6 +70,8 @@ Some of these apps need things that I can't put in the download:
   .NET Framework 4.0, which Windows RT 8.1 already has. The x64 and x86 builds need the Visual C++ 2015 to
   2022 redistributable only for binary add-ons from Kodi's repository. So far I only checked them on my
   build server, not on a PC with a real GPU.
+- **7-Zip RT** needs nothing. Only its installer uses .NET Framework 4.0, which Windows RT 8.1 and
+  Windows 8 and newer already have. On Windows 7 you may have to install it first.
 - **XDM** needs **WPF for ARM32**. It's Microsoft's, so I can't share it here.
 - **Varan** needs the **Microsoft Visual C++ 2015 or newer redistributable for ARM32**, and YouTube in
   Varan needs the vorapis extension.
@@ -94,8 +98,8 @@ requirement, or the wrong Windows versions.
 
 Open an issue in the **app's own repo** (linked in the table) if the app itself has a problem. For XDM,
 Lite XL and Varan, please don't report ARM32 problems to the original projects. They don't make ARM32
-builds. None of the three Kodi RT builds is an official Kodi build, so please report their problems to
-me, not to Team Kodi.
+builds. Kodi RT and 7-Zip RT are not official builds on any platform, so please report their problems
+to me, not to Team Kodi or Igor Pavlov.
 
 ## Credits
 
@@ -105,6 +109,7 @@ me, not to Team Kodi.
 
 XDM is made by **Subhra Das Gupta**. Lite XL is made by the **Lite XL Team** and comes from rxi's lite.
 Varan is a fork of **Pale Moon** by Moonchild Productions, and they don't make or support it. Kodi RT is a
-fork of **Kodi** by Team Kodi, and they don't make or support it either. Venetium is built on
+fork of **Kodi** by Team Kodi, and they don't make or support it either. 7-Zip RT is a fork of **7-Zip**
+by Igor Pavlov, and he doesn't make or support it. Venetium is built on
 **Supermium** and **ungoogled Chromium**. DroidFinestra starts **scrcpy** by Genymobile and
 doesn't change it. Each entry credits the original authors too.

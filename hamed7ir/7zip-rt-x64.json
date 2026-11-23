@@ -1,0 +1,53 @@
+{
+  "id": "7zip-rt-x64",
+  "name": "7-Zip RT (x64)",
+  "version": "26.06",
+  "author": "hamed7ir",
+  "uploader": "hamed7ir",
+  "source": "hamed7ir",
+  "category": "Utilities",
+  "description": "7-Zip RT is my unofficial fork of 7-Zip 26.06 by Igor Pavlov, made for old ARM Windows tablets, and he doesn't make or support it. This is its x64 build for 64-bit Windows 7 and newer, also with PGO and ThinLTO. It has a dark theme in Kodi RT purple, or a light one, and you can pick another colour: the toolbar, the program icon and the archive file icons follow it. It has its own settings and its own context menu, so it can sit next to an official 7-Zip without mixing with it. Once a day it checks GitHub for a newer 7-Zip RT and offers to install it, and you can turn that off. 7-Zip's translations are included. The ARM32 build for the Surface RT and Surface 2 is a separate entry.",
+  "dateOriginal": "2026-11-23",
+  "dateSource": "2026-11-23",
+  "size": "4557312",
+  "dependencies": [
+    ".NET Framework 4.0 or newer, only for the installer. Windows 8 and newer already have it, and on Windows 7 you may have to install it. 7-Zip RT itself needs nothing."
+  ],
+  "instructionSteps": [
+    "On Windows 7, the setup needs .NET Framework 4.0 or newer. Install it first if you don't have it.",
+    "Run 7-Zip-RT-Setup-26.06-x64.exe. It installs only for your user (to %LocalAppData%\\Programs\\7-Zip RT) and doesn't need admin. In the setup you pick your colour, and whether you want the context menu, Open with and a desktop shortcut.",
+    "The files are not signed, so SmartScreen warns the first time. Click More info, then Run anyway.",
+    "If you also have the official 7-Zip, both context menus show up in Explorer. With UAC turned off, or on the built-in Administrator account, Windows ignores per-user context menus, so there the setup registers the menu for all users.",
+    "7-Zip RT checks GitHub once a day for a newer version. Update now downloads the new setup, checks its SHA-256 and runs it, and your choices and settings stay. Help > Check for updates checks right away, and Options > Settings turns the daily check off.",
+    "To remove it, use Control Panel or Settings > Apps."
+  ],
+  "isImmersive": false,
+  "links": [
+    "https://github.com/hamed7ir/7zip-rt",
+    "https://github.com/hamed7ir/7zip-rt/releases/tag/26.06",
+    "https://github.com/ip7z/7zip",
+    "https://7-zip.org/"
+  ],
+  "architecture": "x86-64",
+  "installParameters": [],
+  "DownloadPath": "7-Zip-RT-Setup-26.06-x64.exe",
+  "fileType": "exe",
+  "uninstallParameters": [],
+  "isPortable": false,
+  "compatibility": [
+    "7",
+    "8.0",
+    "8.1",
+    "10",
+    "11"
+  ],
+  "iconUrl": "https://raw.githubusercontent.com/hamed7ir/7zip-rt/refs/tags/26.06/7zip-rt/branding/icons/7zip-rt-256.png",
+  "screenshots": [
+    "https://raw.githubusercontent.com/hamed7ir/7zip-rt/refs/tags/26.06/7zip-rt/branding/poster-26.06.png"
+  ],
+  "downloadUrl": "https://github.com/hamed7ir/7zip-rt/releases/download/26.06/7-Zip-RT-Setup-26.06-x64.exe",
+  "language": [
+    "en-US"
+  ],
+  "isTrial": false
+}
