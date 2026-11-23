@@ -20,9 +20,11 @@
     "Install .NET Framework 4.7 or newer first. On Windows RT 8.1 get it here: https://go.microsoft.com/fwlink/?linkid=2088632. Windows 10 ARM32 already has it.",
     "On Windows RT 8.0 install the .NET Framework 4.8 update first. The app won't start without it, and it's hard to find for RT 8.0 right now.",
     "Run TelegArm-2.1.0-Setup.exe. It checks .NET for you and gives you the link if it's missing.",
+    "In the setup, choose Install and prepare it for this device if you want TelegArm to start about twice as fast. It asks for admin once and takes about 8 minutes on a Surface RT, so Install fast is the default.",
     "Voice and video calls need Windows 8.1 or newer.",
     "On Windows 7 also install the Microsoft Visual C++ 2015 or newer redistributable (x86). TelegArm works without it, but animated stickers won't move.",
-    "Upgrading from an older version: your accounts and settings carry over."
+    "Upgrading from an older version: your accounts and settings carry over.",
+    "From 2.1.0 on, TelegArm updates itself: when a new version is out, an Update button shows in the title bar."
   ],
   "isImmersive": false,
   "links": [
