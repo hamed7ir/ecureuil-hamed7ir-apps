@@ -1,5 +1,108 @@
 [
   {
+    "id": "7zip-rt-x64",
+    "name": "7-Zip RT (x64)",
+    "version": "26.06",
+    "author": "hamed7ir",
+    "uploader": "hamed7ir",
+    "source": "hamed7ir",
+    "category": "Utilities",
+    "description": "7-Zip RT is my unofficial fork of 7-Zip 26.06 by Igor Pavlov, made for old ARM Windows tablets, and he doesn't make or support it. This is its x64 build for 64-bit Windows 7 and newer, also with PGO and ThinLTO. It has a dark theme in Kodi RT purple, or a light one, and you can pick another colour: the toolbar, the program icon and the archive file icons follow it. It has its own settings and its own context menu, so it can sit next to an official 7-Zip without mixing with it. Once a day it checks GitHub for a newer 7-Zip RT and offers to install it, and you can turn that off. 7-Zip's translations are included. The ARM32 build for the Surface RT and Surface 2 is a separate entry.",
+    "dateOriginal": "2026-11-23",
+    "dateSource": "2026-11-23",
+    "size": "4557312",
+    "dependencies": [
+      ".NET Framework 4.0 or newer, only for the installer. Windows 8 and newer already have it, and on Windows 7 you may have to install it. 7-Zip RT itself needs nothing."
+    ],
+    "instructionSteps": [
+      "On Windows 7, the setup needs .NET Framework 4.0 or newer. Install it first if you don't have it.",
+      "Run 7-Zip-RT-Setup-26.06-x64.exe. It installs only for your user (to %LocalAppData%\\Programs\\7-Zip RT) and doesn't need admin. In the setup you pick your colour, and whether you want the context menu, Open with and a desktop shortcut.",
+      "The files are not signed, so SmartScreen warns the first time. Click More info, then Run anyway.",
+      "If you also have the official 7-Zip, both context menus show up in Explorer. With UAC turned off, or on the built-in Administrator account, Windows ignores per-user context menus, so there the setup registers the menu for all users.",
+      "7-Zip RT checks GitHub once a day for a newer version. Update now downloads the new setup, checks its SHA-256 and runs it, and your choices and settings stay. Help > Check for updates checks right away, and Options > Settings turns the daily check off.",
+      "To remove it, use Control Panel or Settings > Apps."
+    ],
+    "isImmersive": false,
+    "links": [
+      "https://github.com/hamed7ir/7zip-rt",
+      "https://github.com/hamed7ir/7zip-rt/releases/tag/26.06",
+      "https://github.com/ip7z/7zip",
+      "https://7-zip.org/"
+    ],
+    "architecture": "x86-64",
+    "installParameters": [],
+    "DownloadPath": "7-Zip-RT-Setup-26.06-x64.exe",
+    "fileType": "exe",
+    "uninstallParameters": [],
+    "isPortable": false,
+    "compatibility": [
+      "7",
+      "8.0",
+      "8.1",
+      "10",
+      "11"
+    ],
+    "iconUrl": "https://raw.githubusercontent.com/hamed7ir/7zip-rt/refs/tags/26.06/7zip-rt/branding/icons/7zip-rt-256.png",
+    "screenshots": [
+      "https://raw.githubusercontent.com/hamed7ir/7zip-rt/refs/tags/26.06/7zip-rt/branding/poster-26.06.png"
+    ],
+    "downloadUrl": "https://github.com/hamed7ir/7zip-rt/releases/download/26.06/7-Zip-RT-Setup-26.06-x64.exe",
+    "language": [
+      "en-US"
+    ],
+    "isTrial": false
+  },
+  {
+    "id": "7zip-rt",
+    "name": "7-Zip RT",
+    "version": "26.06",
+    "author": "hamed7ir",
+    "uploader": "hamed7ir",
+    "source": "hamed7ir",
+    "category": "Utilities",
+    "description": "7-Zip RT is 7-Zip 26.06 for old ARM Windows tablets: the Surface RT on Windows RT 8.1 and the Surface 2 on Windows 10 ARM32, with one file for both. It's my unofficial fork of 7-Zip by Igor Pavlov, and he doesn't make or support it. It's a native ARM32 (Thumb-2) build with PGO and ThinLTO, profiled on a real Surface 2. It has a dark theme in Kodi RT purple, or a light one, and you can pick another colour: the toolbar, the program icon and the archive file icons follow it. The Explorer context menu works on Windows RT, because it's registered only for your user. It has its own settings and its own menu, so it never mixes with an official 7-Zip. Once a day it checks GitHub for a newer 7-Zip RT and offers to install it, and you can turn that off. 7-Zip's translations are included.",
+    "dateOriginal": "2026-11-23",
+    "dateSource": "2026-11-23",
+    "size": "4261888",
+    "dependencies": [
+      ".NET Framework 4.0 or newer, only for the installer. Windows RT 8.1 and Windows 10 already have it. 7-Zip RT itself needs nothing."
+    ],
+    "instructionSteps": [
+      "On Windows RT, jailbreak the device first. RT only runs unsigned desktop apps after a jailbreak.",
+      "Run 7-Zip-RT-Setup-26.06-arm32.exe. It installs only for your user (to %LocalAppData%\\Programs\\7-Zip RT) and doesn't need admin. In the setup you pick your colour, and whether you want the context menu, Open with and a desktop shortcut.",
+      "The files are not signed, so SmartScreen warns the first time. Click More info, then Run anyway.",
+      "If you also have the official 7-Zip, both context menus show up in Explorer. With UAC turned off, or on the built-in Administrator account, Windows ignores per-user context menus, so there the setup registers the menu for all users.",
+      "7-Zip RT checks GitHub once a day for a newer version. Update now downloads the new setup, checks its SHA-256 and runs it, and your choices and settings stay. Help > Check for updates checks right away, and Options > Settings turns the daily check off.",
+      "To remove it, use Control Panel or Settings > Apps."
+    ],
+    "isImmersive": false,
+    "links": [
+      "https://github.com/hamed7ir/7zip-rt",
+      "https://github.com/hamed7ir/7zip-rt/releases/tag/26.06",
+      "https://github.com/ip7z/7zip",
+      "https://7-zip.org/"
+    ],
+    "architecture": "arm32",
+    "installParameters": [],
+    "DownloadPath": "7-Zip-RT-Setup-26.06-arm32.exe",
+    "fileType": "exe",
+    "uninstallParameters": [],
+    "isPortable": false,
+    "compatibility": [
+      "8.1",
+      "10"
+    ],
+    "iconUrl": "https://raw.githubusercontent.com/hamed7ir/7zip-rt/refs/tags/26.06/7zip-rt/branding/icons/7zip-rt-256.png",
+    "screenshots": [
+      "https://raw.githubusercontent.com/hamed7ir/7zip-rt/refs/tags/26.06/7zip-rt/branding/poster-26.06.png"
+    ],
+    "downloadUrl": "https://github.com/hamed7ir/7zip-rt/releases/download/26.06/7-Zip-RT-Setup-26.06-arm32.exe",
+    "language": [
+      "en-US"
+    ],
+    "isTrial": false
+  },
+  {
     "id": "csray",
     "name": "CS-Ray",
     "version": "2.0.0",
@@ -446,10 +549,12 @@
       "On Windows RT, jailbreak the device first. RT only runs unsigned desktop apps after a jailbreak.",
       "Install .NET Framework 4.7 or newer first. On Windows RT 8.1 get it here: https://go.microsoft.com/fwlink/?linkid=2088632. Windows 10 ARM32 already has it.",
       "On Windows RT 8.0 install the .NET Framework 4.8 update first. The app won't start without it, and it's hard to find for RT 8.0 right now.",
-      "Run TelegArm-2.0.0-Setup.exe. It checks .NET for you and gives you the link if it's missing.",
+      "Run TelegArm-2.1.0-Setup.exe. It checks .NET for you and gives you the link if it's missing.",
+      "In the setup, choose Install and prepare it for this device if you want TelegArm to start about twice as fast. It asks for admin once and takes about 8 minutes on a Surface RT, so Install fast is the default.",
       "Voice and video calls need Windows 8.1 or newer.",
       "On Windows 7 also install the Microsoft Visual C++ 2015 or newer redistributable (x86). TelegArm works without it, but animated stickers won't move.",
-      "Upgrading from 1.9: your accounts and settings carry over."
+      "Upgrading from an older version: your accounts and settings carry over.",
+      "From 2.1.0 on, TelegArm updates itself: when a new version is out, an Update button shows in the title bar."
     ],
     "isImmersive": false,
     "links": [
