@@ -1,26 +1,28 @@
 {
   "id": "venetium-x86",
   "name": "Venetium (x86)",
-  "version": "1.2",
+  "version": "1.4",
   "author": "hamed7ir",
   "uploader": "hamed7ir",
   "source": "hamed7ir",
   "category": "Utilities",
-  "description": "Venetium is Chromium 150 (150.0.7871.226) tuned for 2 GB devices, with a built-in ad and tracker blocker (EasyList and EasyPrivacy) that is on by default. This is the 32-bit x86 build. It needs Windows 10 or newer, and it runs on 64-bit Windows too. It's built on Supermium and ungoogled Chromium. The ARM32 builds for the Surface RT and Surface 2 are separate entries.",
-  "dateOriginal": "2026-10-17",
-  "dateSource": "2026-10-17",
-  "size": "156935168",
+  "description": "Venetium is Chromium 150 (150.0.7871.226) tuned for 2 GB devices, with a built-in ad and tracker blocker (EasyList and EasyPrivacy) that is on by default. This is the 32-bit x86 build, and since 1.4 it's a ThinLTO build on top of Google's own profile for 32-bit Windows. It needs Windows 10 or newer, and it runs on 64-bit Windows too. It's built on Supermium and ungoogled Chromium. The ARM32 builds for the Surface RT and Surface 2 are separate entries.",
+  "dateOriginal": "2026-11-24",
+  "dateSource": "2026-11-24",
+  "size": "168660992",
   "dependencies": [],
   "instructionSteps": [
     "Run Venetium-Setup-150.0.7871.226-x86.exe. It installs for your user only, with shortcuts and an uninstaller, and doesn't need admin.",
     "The files are not signed, so SmartScreen warns the first time. Click More info, then Run anyway.",
-    "Upgrading from v1.0: just install v1.2 over it.",
-    "The ad and tracker blocker is on by default. To allow a site, use the \"ads blocked\" icon in the address bar, or turn the blocker off in chrome://settings/content/ads."
+    "Upgrading from an older version: close Venetium, then install 1.4 over it.",
+    "In the setup you can choose the icon: Venetium, a flat WinRT style one, the logo of Venetium for Windows 10 Mobile, or your own .ico. To change it later, close Venetium and run set-icon.exe in the Venetium folder.",
+    "The ad and tracker blocker is on by default. To allow a site, use the \"ads blocked\" icon in the address bar, or turn the blocker off in chrome://settings/content/ads.",
+    "Once a week Venetium checks GitHub for a newer release and shows a bar under the toolbar with a download link. It never downloads or installs anything by itself. To turn it off, start Venetium with --disable-venetium-update-check."
   ],
   "isImmersive": false,
   "links": [
     "https://github.com/hamed7ir/venetium",
-    "https://github.com/hamed7ir/venetium/releases/tag/v1.2",
+    "https://github.com/hamed7ir/venetium/releases/tag/v1.4",
     "https://github.com/win32ss/supermium",
     "https://github.com/ungoogled-software/ungoogled-chromium",
     "https://easylist.to/"
@@ -39,7 +41,7 @@
   "screenshots": [
     "https://github.com/user-attachments/assets/22b96f5f-2fb0-4d95-b1eb-4c093b60b692"
   ],
-  "downloadUrl": "https://github.com/hamed7ir/venetium/releases/download/v1.2/Venetium-Setup-150.0.7871.226-x86.exe",
+  "downloadUrl": "https://github.com/hamed7ir/venetium/releases/download/v1.4/Venetium-Setup-150.0.7871.226-x86.exe",
   "language": [
     "en-US",
     "af",
